@@ -1,0 +1,14 @@
+{
+    "posts": [
+      { "id": 1, "title": "Exploring JSON-Server", "author": "Jane Doe" },
+      { "id": 2, "title": "Advanced Mock APIs", "author": "John Smith" }
+    ],
+    "comments": [
+      { "id": 1, "body": "Great article!", "postId": 1 },
+      { "id": 2, "body": "Very informative.", "postId": 2 }
+    ],
+    "users": [
+      { "id": 1, "name": "Alice", "occupation": "Developer" },
+      { "id": 2, "name": "Bob", "occupation": "Designer" }
+    ]
+  }
