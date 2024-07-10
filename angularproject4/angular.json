@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myangularproject": {
+    "angularproject4": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/myangularproject",
+            "outputPath": "dist/angularproject4",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -42,7 +42,6 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-
             ],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -78,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "myangularproject:build:production"
+              "buildTarget": "angularproject4:build:production"
             },
             "development": {
-              "buildTarget": "myangularproject:build:development"
+              "buildTarget": "angularproject4:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -113,6 +112,6 @@
     }
   },
   "cli": {
-    "analytics": "4382a3c7-3367-46b2-929b-686709c9ebc7"
+    "analytics": "ee7f1c21-e86c-4cce-9f8a-1c0cab554e5e"
   }
 }
