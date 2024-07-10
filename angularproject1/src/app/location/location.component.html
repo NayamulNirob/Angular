@@ -1,7 +1,8 @@
 
 <div class="container  mt-5" >
-<table class="table table-bordered">
+<table class="table table-striped hover">
 <h1>All Locations</h1>
+<thead>
 <tr>
    
     <th>Name</th>
@@ -14,6 +15,9 @@
     
    
 </tr>
+</thead>
+
+<tbody>
 
 <tr *ngFor=" let location of locations |async">
 <td>{{location.name}}</td>
@@ -23,12 +27,14 @@
 <td>{{location.wifi}}</td>
 <td>{{location.laundry}}</td>
 <td>
-    <button type="button" class="btn btn-success  mx-2">Edit</button>
+    <button type="button" class="btn btn-success  mx-2" (click)="updateLocation(location.id)">Edit</button>
     <button type="button" class="btn btn-danger  mx-2" (click)="deleteLocation(location.id)">Delete</button>
 </td>
 
 
 </tr>
+
+</tbody>
 
 
 </table>

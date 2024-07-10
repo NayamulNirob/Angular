@@ -109,6 +109,16 @@
       "availableUnits": "5600",
       "wifi": true,
       "laundry": true
+    },
+    {
+      "id": "dedf",
+      "name": "MD Neyamul Isalm Nirob",
+      "city": "Mohammadpur",
+      "state": "rtsyrn",
+      "photo": "deyd",
+      "availableUnits": "4",
+      "wifi": true,
+      "laundry": true
     }
   ]
 }

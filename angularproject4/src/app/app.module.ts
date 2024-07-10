@@ -25,6 +25,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     ReactiveFormsModule
   ],
   providers: [
+    provideClientHydration(),
     provideHttpClient(
       withFetch()
     )

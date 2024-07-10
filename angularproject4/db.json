@@ -79,16 +79,6 @@
       "availableUnits": 2,
       "wifi": true,
       "laundry": true
-    },
-    {
-      "id": "8",
-      "name": "Seriously Safe Towns",
-      "city": "Oakland",
-      "state": "CA",
-      "photo": "https://angular.io/assets/images/tutorials/faa/saru-robert-9rP3mxf8qWI-unsplash.jpg",
-      "availableUnits": 10,
-      "wifi": false,
-      "laundry": false
     }
   ]
 }
