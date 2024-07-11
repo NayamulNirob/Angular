@@ -42,7 +42,7 @@ this.locationService.deleteLocation(id)
   }
   
   updateLocation(id:string){
-this.router.navigate(['updateLocation'+id]);
+this.router.navigate(['/updateLocation',id]);
 
   }
 

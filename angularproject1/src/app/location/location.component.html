@@ -1,43 +1,44 @@
+<div class="container  mt-5">
+    <h1>All Locations</h1>
+    <table class="table table-striped hover">
+        <thead>
+            <tr>
 
-<div class="container  mt-5" >
-<table class="table table-striped hover">
-<h1>All Locations</h1>
-<thead>
-<tr>
-   
-    <th>Name</th>
-    <th>City</th>
-    <th>State</th>
-    <th>AvailableUnits</th>
-    <th>Wifi</th>
-    <th>Laundry</th>
-    <th >Action</th>
-    
-   
-</tr>
-</thead>
-
-<tbody>
-
-<tr *ngFor=" let location of locations |async">
-<td>{{location.name}}</td>
-<td>{{location.city}}</td>
-<td>{{location.state}}</td>
-<td>{{location.availableUnits}}</td>
-<td>{{location.wifi}}</td>
-<td>{{location.laundry}}</td>
-<td>
-    <button type="button" class="btn btn-success  mx-2" (click)="updateLocation(location.id)">Edit</button>
-    <button type="button" class="btn btn-danger  mx-2" (click)="deleteLocation(location.id)">Delete</button>
-</td>
+                <th>Name</th>
+                <th>City</th>
+                <th>State</th>
+                <th>AvailableUnits</th>
+                <th>Wifi</th>
+                <th>Laundry</th>
+                <th>Action</th>
 
 
-</tr>
+            </tr>
+        </thead>
 
-</tbody>
+        <tbody>
+
+            <tr *ngFor=" let location of locations |async">
+                <td>{{location.name}}</td>
+                <td>{{location.city}}</td>
+                <td>{{location.state}}</td>
+                <td>{{location.availableUnits}}</td>
+                <td>{{location.wifi}}</td>
+                <td>{{location.laundry}}</td>
+                <td>
+                    <button type="button" class="btn btn-success  mx-2"
+                        (click)="updateLocation(location.id)">Edit</button>
+                    <button type="button" class="btn btn-danger  mx-2"
+                        (click)="deleteLocation(location.id)">Delete</button>
+                </td>
 
 
-</table>
+            </tr>
+
+        </tbody>
+
+
+    </table>
 
 
 

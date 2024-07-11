@@ -1,7 +1,8 @@
 
 <div class="container  mt-5" >
-    <table class="table table-bordered">
     <h1>All Locations</h1>
+    <table class="table table-bordered">
+    <thead>
     <tr>
        
         <th>Name</th>
@@ -14,7 +15,9 @@
         
        
     </tr>
-    
+</thead>
+
+<tbody> 
     <tr *ngFor=" let location of locations |async">
     <td>{{location.name}}</td>
     <td>{{location.city}}</td>
@@ -28,7 +31,7 @@
     </td>
     
     
-    </tr>
+</tbody>
     
     
     </table>

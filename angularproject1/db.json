@@ -1,23 +1,13 @@
 {
   "locations": [
     {
-      "id": "0",
-      "name": "Acme Fresh Start Housing",
-      "city": "Chicago",
-      "state": "IL",
-      "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-      "availableUnits": 4,
-      "wifi": true,
-      "laundry": true
-    },
-    {
       "id": "1",
-      "name": "A113 Transitional Housing",
-      "city": "Santa Monica",
+      "name": "NAYAMUL ISLAM",
+      "city": "Dhaka",
       "state": "CA",
       "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-      "availableUnits": 0,
-      "wifi": false,
+      "availableUnits": "1207",
+      "wifi": true,
       "laundry": true
     },
     {
@@ -51,16 +41,6 @@
       "laundry": false
     },
     {
-      "id": "5",
-      "name": "Hopeful Apartment Group",
-      "city": "Oakland",
-      "state": "CA",
-      "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
-      "availableUnits": 2,
-      "wifi": true,
-      "laundry": true
-    },
-    {
       "id": "6",
       "name": "Seriously Safe Towns",
       "city": "Oakland",
@@ -87,16 +67,6 @@
       "state": "CA",
       "photo": "https://angular.io/assets/images/tutorials/faa/saru-robert-9rP3mxf8qWI-unsplash.jpg",
       "availableUnits": 10,
-      "wifi": false,
-      "laundry": false
-    },
-    {
-      "id": "9",
-      "name": "Capital Safe Towns",
-      "city": "Portland",
-      "state": "OR",
-      "photo": "https://angular.io/assets/images/tutorials/faa/webaliser-_TPTXZd9mOo-unsplash.jpg",
-      "availableUnits": 6,
       "wifi": true,
       "laundry": true
     },
@@ -109,21 +79,11 @@
       "availableUnits": "5600",
       "wifi": true,
       "laundry": true
-    },
-    {
-      "id": "dedf",
-      "name": "MD Neyamul Isalm Nirob",
-      "city": "Mohammadpur",
-      "state": "rtsyrn",
-      "photo": "deyd",
-      "availableUnits": "4",
-      "wifi": true,
-      "laundry": true
     }
   ],
   "students": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Raju",
       "email": "raju@gmail.com",
       "cellNo": "123456789",

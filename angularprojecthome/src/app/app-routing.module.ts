@@ -5,8 +5,8 @@ import { EmployeeComponent } from './employee/employee.component';
 
 const routes: Routes = [
 
-{path:"stu",component:StudentComponent},
-{path:"emp",component:EmployeeComponent}
+{path:"student",component:StudentComponent},
+{path:"employee",component:EmployeeComponent}
 
 ];
 
