@@ -22,7 +22,7 @@ export class ViewstudentComponent implements OnInit{
   }
   
   ngOnInit(): void {
-    this.locations=this.locationService.getAlllocation();
+    this.locations=this.locationService.getLocationForStudent;
     this.students=this.service.viewAllStudent();
   }
 

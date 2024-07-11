@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { Location } from './location/location.model';
 
 @Injectable({
@@ -15,6 +15,22 @@ export class LocationService {
   getAlllocation(): Observable<any> {
     return this.httpClient.get<any>(this.baseUrl);
   }
+
+
+
+  getLocationForStudent():Observable<Location[]>{
+return this.httpClient.get<Location[]>(this.baseUrl)
+.pipe(
+  catchError(this.handleError)
+)
+
+  }
+
+  private handleError(error:any){
+    console.error('An error occurred:',error);
+    return throwError(()=>new Error('test'));
+  };
+  
 
 
   creteLocation(location: Location): Observable<any> {

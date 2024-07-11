@@ -4,7 +4,7 @@
       "id": "1",
       "name": "NAYAMUL ISLAM",
       "city": "Dhaka",
-      "state": "CA",
+      "state": "Mohammodpur",
       "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
       "availableUnits": "1207",
       "wifi": true,
@@ -51,26 +51,6 @@
       "laundry": true
     },
     {
-      "id": "7",
-      "name": "Hopeful Housing Solutions",
-      "city": "Oakland",
-      "state": "CA",
-      "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-GGupkreKwxA-unsplash.jpg",
-      "availableUnits": 2,
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "8",
-      "name": "Seriously Safe Towns",
-      "city": "Oakland",
-      "state": "CA",
-      "photo": "https://angular.io/assets/images/tutorials/faa/saru-robert-9rP3mxf8qWI-unsplash.jpg",
-      "availableUnits": 10,
-      "wifi": true,
-      "laundry": true
-    },
-    {
       "id": "948f",
       "name": "Md Nayamul lslam",
       "city": "Kurigram",
@@ -83,13 +63,127 @@
   ],
   "students": [
     {
-      "id": "1",
+      "id": "8",
       "name": "Raju",
       "email": "raju@gmail.com",
       "cellNo": "123456789",
       "location": {
-        "id": "0"
+        "id": "2",
+        "name": "Warm Beds Housing Support",
+        "city": "Juneau",
+        "state": "AK",
+        "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+        "availableUnits": 1,
+        "wifi": false,
+        "laundry": false
       }
+    },
+    {
+      "id": "9",
+      "name": "Rizvi",
+      "email": "rizvi@gmail.com",
+      "cellNo": "987654321",
+      "location": {
+        "id": "9",
+        "name": "Warm Beds Housing Support",
+        "city": "Juneau",
+        "state": "AK",
+        "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+        "availableUnits": 1,
+        "wifi": false,
+        "laundry": false
+      }
+    },
+    {
+      "id": "4c33",
+      "name": "fgawfweb",
+      "email": "nayamulislam@gmail.com",
+      "cellNo": "4532532543453",
+      "location": "Happy Homes Group"
+    },
+    {
+      "id": "8177",
+      "name": "wanadfsdf",
+      "email": "1302neyamulislamnirob@gmail.com",
+      "cellNo": "6+5",
+      "location": null
+    },
+    {
+      "id": "0a10",
+      "name": null,
+      "email": null,
+      "cellNo": "+65",
+      "location": null
+    },
+    {
+      "id": "e635",
+      "name": null,
+      "email": null,
+      "cellNo": null,
+      "location": null
+    },
+    {
+      "id": "6605",
+      "name": null,
+      "email": null,
+      "cellNo": "5",
+      "location": null
+    },
+    {
+      "id": "da30",
+      "name": null,
+      "email": null,
+      "cellNo": "+6",
+      "location": null
+    },
+    {
+      "id": "a349",
+      "name": null,
+      "email": null,
+      "cellNo": "+",
+      "location": null
+    },
+    {
+      "id": "aba2",
+      "name": "6+",
+      "email": "nayamulislam@gmail.com",
+      "cellNo": "8969869866",
+      "location": "Happy Homes Group"
+    },
+    {
+      "id": "1650",
+      "name": "+",
+      "email": null,
+      "cellNo": null,
+      "location": null
+    },
+    {
+      "id": "f4ff",
+      "name": "6+",
+      "email": null,
+      "cellNo": null,
+      "location": null
+    },
+    {
+      "id": "32b9",
+      "name": "ejtsztstjtjust",
+      "email": "nayamulislam@gmail.com",
+      "cellNo": "45564656546554654",
+      "location": "Seriously Safe Towns"
+    },
+    {
+      "id": "5c48",
+      "name": "Md Nayamul lslam",
+      "email": "nayamulislam@gmail.com",
+      "cellNo": "573255725725",
+      "location": "Seriously Safe Towns"
+    },
+    {
+      "id": "f17b",
+      "name": "Md Nayamul lslam",
+      "email": "nayamulislam@gmail.com",
+      "cellNo": "455656+4665446",
+      "location": "Seriously Safe Towns"
     }
   ]
 }
