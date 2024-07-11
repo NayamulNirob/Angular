@@ -5,13 +5,15 @@ import { EmployeeComponent } from './employee/employee.component';
 import { LocationComponent } from './location/location.component';
 import { CreatelocationComponent } from './createlocation/createlocation.component';
 import { UpdatelocationComponent } from './updatelocation/updatelocation.component';
+import { ViewstudentComponent } from './student/viewstudent/viewstudent.component';
 
 const routes: Routes = [
-  {path:"student", component:StudentComponent},
+  {path:"student", component:ViewstudentComponent},
   {path:"employee", component:EmployeeComponent},
   {path:"location", component:LocationComponent},
   {path:"createlocation", component:CreatelocationComponent},
   {path:"updateLocation/:id", component:UpdatelocationComponent}
+  
 ];
 
 @NgModule({

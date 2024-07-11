@@ -1,0 +1,45 @@
+
+<div class="container  mt-5" >
+    <table class="table table-striped hover">
+    <h1>All Locations</h1>
+    <thead>
+    <tr>
+       
+        <th>Name</th>
+        <th>Email</th>
+        <th>Cell</th>
+        <th>Location Name</th>
+       
+        <th >Action</th>
+        
+       
+    </tr>
+    </thead>
+    
+    <tbody>
+    
+    <tr *ngFor=" let stu of students |async">
+    <td>{{stu.name}}</td>
+    <td>{{stu.email}}</td>
+    <td>{{stu.cellNo}}</td>
+    <td>{{stu.location.name}}</td>
+
+    <td>
+        <button type="button" class="btn btn-success  mx-2">Edit</button>
+        <button type="button" class="btn btn-danger  mx-2" >Delete</button>
+    </td>
+    
+    
+    </tr>
+    
+    </tbody>
+    
+    
+    </table>
+    
+    
+    
+    
+    
+    </div>
+    
