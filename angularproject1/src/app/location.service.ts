@@ -18,19 +18,19 @@ export class LocationService {
 
 
 
-  getLocationForStudent():Observable<Location[]>{
-return this.httpClient.get<Location[]>(this.baseUrl)
-.pipe(
-  catchError(this.handleError)
-)
+  getLocationForStudent(): Observable<Location[]> {
+    return this.httpClient.get<Location[]>(this.baseUrl)
+      .pipe(
+        catchError(this.handleError)
+      )
 
   }
 
-  private handleError(error:any){
-    console.error('An error occurred:',error);
-    return throwError(()=>new Error('test'));
+  private handleError(error: any) {
+    console.error('An error occurred:', error);
+    return throwError(() => new Error('test'));
   };
-  
+
 
 
   creteLocation(location: Location): Observable<any> {

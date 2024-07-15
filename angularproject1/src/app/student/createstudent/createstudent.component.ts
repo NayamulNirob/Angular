@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { StudentService } from '../student.service';
 import { LocationService } from '../../location.service';
 import { error } from 'console';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-createstudent',
@@ -22,9 +23,9 @@ export class CreatestudentComponent implements OnInit {
   constructor(
     private studentService: StudentService,
     private locationService: LocationService,
-    private fromBuilder: FormBuilder
+    private fromBuilder: FormBuilder,
+    private router: Router
   ) {
-
 
   }
 
@@ -36,7 +37,29 @@ export class CreatestudentComponent implements OnInit {
       name:[''],
       email:[''],
       cellNo:[''],
-      location:[null]
+      location:this.fromBuilder.group({
+        id:[undefined],
+        name:[undefined],
+        city:[undefined],
+        state:[undefined],
+        photo:[undefined],
+        availableUnits:[undefined],
+        wifi:[undefined],
+        luandry:[undefined]
+
+
+      })
+
+    });
+
+    this.studentFrom.get('location')?.get('name')?.valueChanges.subscribe(
+      name=>{
+        const selectedLocation = this.locations.find(loc => loc.name===name);
+        if(selectedLocation){
+          this.studentFrom.patchValue({location: selectedLocation});
+        }
+
+
 
     });
 
@@ -59,6 +82,7 @@ export class CreatestudentComponent implements OnInit {
 
       });
 
+      
 
   }
 
@@ -73,6 +97,7 @@ export class CreatestudentComponent implements OnInit {
       next: res => {
         this.loadLocation();
         this.studentFrom.reset();
+        this.router.navigate(['student']);
 
       },
 

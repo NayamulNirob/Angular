@@ -32,7 +32,7 @@ this.locationService.deleteLocation(id)
     .subscribe({
       next:res=>{
         this.locations=this.locationService.getAlllocation();
-        this.router.navigate(['/location'])
+        this.router.navigate(['location'])
       },
       error:error=>{
         console.log(error);

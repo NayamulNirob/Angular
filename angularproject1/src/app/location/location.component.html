@@ -10,6 +10,7 @@
                 <th>AvailableUnits</th>
                 <th>Wifi</th>
                 <th>Laundry</th>
+                <th>Photo</th>
                 <th>Action</th>
 
 
@@ -25,6 +26,8 @@
                 <td>{{location.availableUnits}}</td>
                 <td>{{location.wifi}}</td>
                 <td>{{location.laundry}}</td>
+                <td><img [src]="location.photo" alt="{{location.name}}" style="width: 50px; height: auto;"></td>
+               
                 <td>
                     <button type="button" class="btn btn-success  mx-2"
                         (click)="updateLocation(location.id)">Edit</button>
