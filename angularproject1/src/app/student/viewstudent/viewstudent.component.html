@@ -1,0 +1,73 @@
+
+<div class="container  mt-5" >
+    <h1>All Students</h1>
+    <table class="table table-striped hover">
+    
+    <thead>
+    <tr>
+       
+        <th>Name</th>
+        <th>Email</th>
+        <th>Cell</th>
+        <th>Location Name</th>
+        <th>City</th>
+        <th>Photo</th> 
+        <th >Action</th>
+        
+       
+    </tr>
+    </thead>
+    
+    <tbody>
+    
+    <tr *ngFor=" let stu of students">
+    <td>{{stu.name}}</td>
+    <td>{{stu.email}}</td>
+    <td>{{stu.cellNo}}</td>
+    <td>{{stu.location.name}}</td>
+    <td>{{stu.location.city}}</td>
+    <td><img [src]="stu.location.photo" alt="{{stu.location.name}}" style="width: 50px; height: auto;"></td>
+    
+
+
+    <td>
+        <button type="button" class="btn btn-success  mx-2"(click)="editStudent(stu)">Edit</button>
+        <button type="button" class="btn btn-danger  mx-2" (click)="deleteStudent(stu.id)">Delete</button>
+    </td>
+    
+    
+    </tr>
+    
+    </tbody>
+    
+    
+    </table>
+    
+    
+    
+    
+    
+    </div>
+
+    <!-- <div class="container">
+        <h2>Students List</h2>
+        <ul class="list-group">
+            <li *ngFor="let student of students " class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                    <strong>Name: </strong> {{ student.name }}
+                    <br><strong>Email: </strong> {{ student.email }}
+                    <div>
+                        <strong>Location Name: </strong>  {{ student.location.name }}<br>
+                        <strong>City: </strong> {{ student.location.city }} <br>
+                        <strong>Cell No: </strong>{{ student.cellNo}}<br>
+                        <em> <strong>Picture: </strong> </em><img [src]="student.location.photo" alt="{{student.location.name}}" style="width: 90px; height: auto;">
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-sm btn-danger me-2" (click)="deleteStudent(student.id)">Delete</button>
+                    <button class="btn btn-sm btn-primary"(click)="editStudent(student)" >Edit</button>
+                </div>
+            </li>
+        </ul>
+    </div> -->
+    
