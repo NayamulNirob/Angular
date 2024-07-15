@@ -74,17 +74,17 @@
   "students": [
     {
       "id": "8",
-      "name": "Raju",
+      "name": "Seriously Safe Towns",
       "email": "raju@gmail.com",
       "cellNo": "123456789",
       "location": {
-        "id": "2",
-        "name": "Warm Beds Housing Support",
-        "city": "Juneau",
-        "state": "AK",
-        "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+        "id": "4",
+        "name": "Happy Homes Group",
+        "city": "Gary",
+        "state": "IN",
+        "photo": "https://angular.io/assets/images/tutorials/faa/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
         "availableUnits": 1,
-        "wifi": false,
+        "wifi": true,
         "laundry": false
       }
     },
@@ -132,6 +132,38 @@
         "state": "Dhaka",
         "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
         "availableUnits": "569",
+        "wifi": true,
+        "laundry": null
+      }
+    },
+    {
+      "id": "a56c",
+      "name": "Md Nayamul lslam",
+      "email": "nayamulislam@gmail.com",
+      "cellNo": "hg",
+      "location": {
+        "id": "2",
+        "name": "Warm Beds Housing Support",
+        "city": "Juneau",
+        "state": "ALASKA",
+        "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+        "availableUnits": 1,
+        "wifi": true,
+        "luandry": null
+      }
+    },
+    {
+      "id": "32f0",
+      "name": "NAYAMUL ISLAM",
+      "email": "nayamulislam@gmail.com",
+      "cellNo": "213",
+      "location": {
+        "id": "4",
+        "name": "Happy Homes Group",
+        "city": "Gary",
+        "state": "IN",
+        "photo": "https://angular.io/assets/images/tutorials/faa/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
+        "availableUnits": 1,
         "wifi": true,
         "luandry": null
       }

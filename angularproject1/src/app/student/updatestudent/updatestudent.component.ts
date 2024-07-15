@@ -5,7 +5,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { LocationService } from '../../location.service';
 import { StudentService } from '../student.service';
 import { Location } from '../../location/location.model';
-import { error } from 'console';
 
 @Component({
   selector: 'app-updatestudent',
