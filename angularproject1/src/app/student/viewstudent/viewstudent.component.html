@@ -1,5 +1,5 @@
 
-<!-- <div class="container  mt-5" >
+<div class="container  mt-5" >
     <h1>All Students</h1>
     <table class="table table-striped hover">
     
@@ -31,7 +31,7 @@
 
 
     <td>
-        <button type="button" class="btn btn-success  mx-2">Edit</button>
+        <button type="button" class="btn btn-success  mx-2"(click)="editStudent(stu)">Edit</button>
         <button type="button" class="btn btn-danger  mx-2" (click)="deleteStudent(stu.id)">Delete</button>
     </td>
     
@@ -47,9 +47,9 @@
     
     
     
-    </div> -->
+    </div>
 
-    <div class="container">
+    <!-- <div class="container">
         <h2>Students List</h2>
         <ul class="list-group">
             <li *ngFor="let student of students " class="list-group-item d-flex justify-content-between align-items-center">
@@ -69,5 +69,5 @@
                 </div>
             </li>
         </ul>
-    </div>
+    </div> -->
     
