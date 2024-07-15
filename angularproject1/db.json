@@ -59,6 +59,16 @@
       "availableUnits": "65",
       "wifi": true,
       "laundry": true
+    },
+    {
+      "id": "18e1",
+      "name": "Kazipara",
+      "city": "Mirpur",
+      "state": "Dhaka",
+      "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+      "availableUnits": "569",
+      "wifi": true,
+      "laundry": true
     }
   ],
   "students": [
@@ -95,19 +105,35 @@
       }
     },
     {
-      "id": "7275",
-      "name": "NAYAMUL ISLAM",
-      "email": "nayamulislam@gmail.com",
-      "cellNo": "3",
+      "id": "e9a4",
+      "name": "Nirjash",
+      "email": "nir@gmail.com",
+      "cellNo": "25345235",
       "location": {
-        "id": "1",
-        "name": "Pc Culture Housing Society",
-        "city": "Dhaka",
-        "state": "Mohammodpur",
-        "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-        "availableUnits": "1207",
+        "id": "4",
+        "name": "Happy Homes Group",
+        "city": "Gary",
+        "state": "IN",
+        "photo": "https://angular.io/assets/images/tutorials/faa/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
+        "availableUnits": 1,
         "wifi": true,
-        "laundry": true
+        "luandry": null
+      }
+    },
+    {
+      "id": "fbb5",
+      "name": "Nirob",
+      "email": "nirob@gmail.com",
+      "cellNo": "564745544554",
+      "location": {
+        "id": "18e1",
+        "name": "Kazipara",
+        "city": "Mirpur",
+        "state": "Dhaka",
+        "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+        "availableUnits": "569",
+        "wifi": true,
+        "luandry": null
       }
     }
   ]
