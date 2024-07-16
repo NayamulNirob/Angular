@@ -36,9 +36,11 @@ login(credentials:{email:string;password:string}):Observable<AuthResponse>{
 
   return this.http.get<UserModel[]>(`${this.baseUrl}`,{params}).pipe(
     map(users=>{
-      if(users.length>0){
+      if(users.length > 0){
         const user=users[0];
-        if(user.password===credentials.password){
+        if(user.password === credentials.password){
+          console.log(user.password);
+          console.log(credentials.password);
           const token =btoa(`${user.email}:${user.password}`);
           return {token,user}as AuthResponse;
         }else{

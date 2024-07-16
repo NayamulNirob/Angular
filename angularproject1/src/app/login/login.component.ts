@@ -31,7 +31,7 @@ onSubmit(): void {
       next: (res) => {
         console.log('User logged in successfully:', res);
         this.authservice.storeToken(res.token);
-        this.router.navigate(['/']); // Navigate to a protected route after login
+        this.router.navigate(['/']); 
       },
       error: (err) => {
         console.error('Error logging in:', err);

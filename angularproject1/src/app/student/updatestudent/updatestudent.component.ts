@@ -93,7 +93,7 @@ export class UpdatestudentComponent implements OnInit {
     this.studentService.updateStudent(updatedStudent).subscribe({
       next: res => {
         console.log('Student updated successfully:', res);
-        this.router.navigate(['student']); // Navigate to the students list after update
+        this.router.navigate(['student']);
       },
       error: err => {
         console.log('Error updating student:', err);

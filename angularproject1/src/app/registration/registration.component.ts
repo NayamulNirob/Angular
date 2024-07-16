@@ -20,9 +20,9 @@ export class RegistrationComponent {
     private fromBulider:FormBuilder
   ){
     this.regFrom=this.fromBulider.group({
-      name:['',Validators.required],
-      email:['',Validators.required,Validators.email],
-      password:['',Validators.required]
+      name:[''],
+      email:[''],
+      password:['']
     })
   }
 
