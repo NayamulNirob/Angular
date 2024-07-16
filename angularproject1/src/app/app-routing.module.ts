@@ -8,6 +8,8 @@ import { UpdatelocationComponent } from './updatelocation/updatelocation.compone
 import { ViewstudentComponent } from './student/viewstudent/viewstudent.component';
 import { CreatestudentComponent } from './student/createstudent/createstudent.component';
 import { UpdatestudentComponent } from './student/updatestudent/updatestudent.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path:"student", component:ViewstudentComponent},
@@ -16,7 +18,10 @@ const routes: Routes = [
   {path:"createlocation", component:CreatelocationComponent},
   {path:"updateLocation/:id", component:UpdatelocationComponent},  
   {path:"createstudent", component:CreatestudentComponent},
-  {path:"updatestudent/:id", component:UpdatestudentComponent}
+  {path:"updatestudent/:id", component:UpdatestudentComponent},
+  {path:"reg", component:RegistrationComponent},
+  {path:"login", component:LoginComponent}
+
 
     
 ];

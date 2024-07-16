@@ -1,4 +1,36 @@
 {
+  "user": [
+    {
+      "id": "1",
+      "Name": "Raju Ahamed",
+      "email": "rajuahamed@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "2",
+      "Name": " Rofiql Islam",
+      "email": "rofiqul@gmail.com",
+      "password": "54321"
+    },
+    {
+      "id": "5a6c",
+      "name": "Raju Ahamed",
+      "email": "rajuahamed@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "ade9",
+      "name": "Raju Ahamed",
+      "email": "rajuahamed@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "0ab0",
+      "name": "Raju Ahamed",
+      "email": "rajuahamed@gmail.com",
+      "password": "1234567"
+    }
+  ],
   "locations": [
     {
       "id": "1",
@@ -65,29 +97,13 @@
       "name": "Kazipara",
       "city": "Mirpur",
       "state": "Dhaka",
-      "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+      "photo": "https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2024/02/17/mirpur.jpg",
       "availableUnits": "569",
       "wifi": true,
       "laundry": true
     }
   ],
   "students": [
-    {
-      "id": "8",
-      "name": "Seriously Safe Towns",
-      "email": "raju@gmail.com",
-      "cellNo": "123456789",
-      "location": {
-        "id": "4",
-        "name": "Happy Homes Group",
-        "city": "Gary",
-        "state": "IN",
-        "photo": "https://angular.io/assets/images/tutorials/faa/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
-        "availableUnits": 1,
-        "wifi": true,
-        "laundry": false
-      }
-    },
     {
       "id": "9653",
       "name": "Aminul Islam (Nusu)",
