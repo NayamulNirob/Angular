@@ -122,6 +122,13 @@
       "email": "shawon@gmail.com",
       "password": "1234",
       "photo": "C:\\fakepath\\274208446_3122906687950281_3743521531588765186_n.jpg"
+    },
+    {
+      "id": "7c5c",
+      "name": "Neyamul Islam",
+      "email": "nayamulislam@gmail.com",
+      "password": "123456789",
+      "photo": "https://photos.google.com/photo/AF1QipNvWiIuBp5A6DEXH8Ohha7Xq6RUxbQliEiwu9EF"
     }
   ],
   "locations": [
@@ -141,7 +148,7 @@
       "city": "Juneau",
       "state": "ALASKA",
       "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
-      "availableUnits": 1,
+      "availableUnits": "1203",
       "wifi": true,
       "laundry": true
     },
@@ -151,9 +158,9 @@
       "city": "Chicago",
       "state": "IL",
       "photo": "https://angular.io/assets/images/tutorials/faa/ian-macdonald-W8z6aiwfi1E-unsplash.jpg",
-      "availableUnits": 1,
+      "availableUnits": "1206",
       "wifi": true,
-      "laundry": false
+      "laundry": true
     },
     {
       "id": "4",
@@ -161,9 +168,9 @@
       "city": "Gary",
       "state": "IN",
       "photo": "https://angular.io/assets/images/tutorials/faa/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
-      "availableUnits": 1,
+      "availableUnits": "1209",
       "wifi": true,
-      "laundry": false
+      "laundry": true
     },
     {
       "id": "6",
@@ -171,7 +178,7 @@
       "city": "Oakland",
       "state": "CA",
       "photo": "https://angular.io/assets/images/tutorials/faa/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
-      "availableUnits": 5,
+      "availableUnits": "1263",
       "wifi": true,
       "laundry": true
     },
@@ -181,7 +188,7 @@
       "city": "Dhanmondi",
       "state": "Dhaka",
       "photo": "https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2024/02/17/mirpur.jpg",
-      "availableUnits": "6",
+      "availableUnits": "12108",
       "wifi": true,
       "laundry": true
     }

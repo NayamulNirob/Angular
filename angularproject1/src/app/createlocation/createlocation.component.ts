@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationService } from '../location.service';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Location } from '../location/location.model';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { state } from '@angular/animations';
-import { error } from 'console';
 
 @Component({
   selector: 'app-createlocation',
