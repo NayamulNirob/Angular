@@ -23,6 +23,105 @@
       "name": "Nirjash",
       "email": "nirjash@gmail.com",
       "password": "2020"
+    },
+    {
+      "id": "6590",
+      "name": "nayamulislam",
+      "email": "nayamulislam@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "086d",
+      "name": "Nir",
+      "email": "nir@gmail.com",
+      "password": "00000"
+    },
+    {
+      "id": "e2f6",
+      "name": "MD NAYAMUL ISLAM",
+      "email": "1302neyamulislamnirob@gmail.com",
+      "password": "123456",
+      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg"
+    },
+    {
+      "id": "0c5e",
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "password": "2020",
+      "photo": ""
+    },
+    {
+      "id": "ba3a",
+      "name": "NAY",
+      "email": "nay@gmail.com",
+      "password": "1010",
+      "photo": "C:\\fakepath\\14560242_1124317404289828_499115094570314503_ovf.jpg"
+    },
+    {
+      "id": "2c29",
+      "name": "XYZ",
+      "email": "xyz@gmail.com",
+      "password": "3030",
+      "photo": "C:\\fakepath\\278984540_3167143610193255_614176764465450574_n.jpg"
+    },
+    {
+      "id": "7e99",
+      "name": "nayamulislam",
+      "email": "nayamulislam@gmail.com",
+      "password": "1020",
+      "photo": "C:\\fakepath\\14560242_1124317404289828_499115094570314503_ovf.jpg"
+    },
+    {
+      "id": "1973",
+      "name": "Nusu",
+      "email": "nusu@gmail.com",
+      "password": "7896",
+      "photo": "C:\\fakepath\\272868544_3112207369020213_5492546927594439610_n.jpg"
+    },
+    {
+      "id": "f72a",
+      "name": "ADD",
+      "email": "avc@gh.com",
+      "password": "1020",
+      "age": false,
+      "photo": false
+    },
+    {
+      "id": "72f2",
+      "name": false,
+      "email": false,
+      "password": "2580",
+      "age": false,
+      "photo": false
+    },
+    {
+      "id": "dad5",
+      "name": "fyhdtyt",
+      "email": "fdsgsradgfa@",
+      "password": "4567",
+      "age": false,
+      "photo": false
+    },
+    {
+      "id": "b65e",
+      "name": "Nayamul lslam",
+      "email": "nayamulislam@gmail.com",
+      "password": "102030",
+      "photo": "C:\\fakepath\\14560242_1124317404289828_499115094570314503_ovf.jpg"
+    },
+    {
+      "id": "b641",
+      "name": "gjjg",
+      "email": "abcdefg@hghh.com",
+      "password": "10203040",
+      "photo": "C:\\fakepath\\272977200_3110062512568032_4144848652242639043_n.jpg"
+    },
+    {
+      "id": "37d8",
+      "name": "Shawon",
+      "email": "shawon@gmail.com",
+      "password": "1234",
+      "photo": "C:\\fakepath\\274208446_3122906687950281_3743521531588765186_n.jpg"
     }
   ],
   "locations": [
@@ -81,18 +180,8 @@
       "name": "Sonkar Plaza",
       "city": "Dhanmondi",
       "state": "Dhaka",
-      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-      "availableUnits": "65",
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "18e1",
-      "name": "Kazipara",
-      "city": "Mirpur",
-      "state": "Dhaka",
       "photo": "https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2024/02/17/mirpur.jpg",
-      "availableUnits": "569",
+      "availableUnits": "6",
       "wifi": true,
       "laundry": true
     }
@@ -127,7 +216,7 @@
         "photo": "https://angular.io/assets/images/tutorials/faa/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
         "availableUnits": 1,
         "wifi": true,
-        "luandry": null
+        "laundry": null
       }
     },
     {
@@ -150,7 +239,7 @@
       "id": "a56c",
       "name": "Md Nayamul lslam",
       "email": "nayamulislam@gmail.com",
-      "cellNo": "hg",
+      "cellNo": "123456",
       "location": {
         "id": "2",
         "name": "Warm Beds Housing Support",
@@ -159,23 +248,7 @@
         "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
         "availableUnits": 1,
         "wifi": true,
-        "luandry": null
-      }
-    },
-    {
-      "id": "32f0",
-      "name": "NAYAMUL ISLAM",
-      "email": "nayamulislam@gmail.com",
-      "cellNo": "213",
-      "location": {
-        "id": "4",
-        "name": "Happy Homes Group",
-        "city": "Gary",
-        "state": "IN",
-        "photo": "https://angular.io/assets/images/tutorials/faa/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
-        "availableUnits": 1,
-        "wifi": true,
-        "luandry": null
+        "laundry": null
       }
     }
   ]

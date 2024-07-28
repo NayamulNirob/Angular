@@ -42,6 +42,7 @@ login(credentials:{email:string;password:string}):Observable<AuthResponse>{
           console.log(user.password);
           console.log(credentials.password);
           const token =btoa(`${user.email}:${user.password}`);
+          this.storeUserProfile(user);
           return {token,user}as AuthResponse;
         }else{
           throw new Error('Invalid Password');
@@ -68,6 +69,18 @@ storeToken(token:string):void{
 
 getToken():string|null{
   return localStorage.getItem('token');
+}
+
+storeUserProfile(user:UserModel): void{
+localStorage.setItem('userProfile',JSON.stringify(user));
+}
+getUserProfileFromStore(): UserModel| null{
+  const userProfile=localStorage.getItem('userProfile');
+  return userProfile ? JSON.parse(userProfile) : null;
+}
+
+removeUserDetails(){
+  localStorage.clear();
 }
 
 }

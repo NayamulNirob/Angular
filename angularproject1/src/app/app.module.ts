@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudentComponent } from './student/student.component';
@@ -15,6 +14,9 @@ import { CreatestudentComponent } from './student/createstudent/createstudent.co
 import { UpdatestudentComponent } from './student/updatestudent/updatestudent.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { HomeComponent } from './home/home.component';
+import { LogoutComponent } from './logout/logout.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,10 @@ import { RegistrationComponent } from './registration/registration.component';
     CreatestudentComponent,
     UpdatestudentComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    HomeComponent,
+    LogoutComponent,
+    UserprofileComponent
   ],
   imports: [
     BrowserModule,

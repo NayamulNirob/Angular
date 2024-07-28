@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup  } from '@angular/forms';
 import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
 
@@ -19,6 +19,7 @@ constructor(
   this.loginFrom=this.fromBuilder.group({
     email:[''],
     password:['']
+   
   });
 }
 
@@ -31,7 +32,7 @@ onSubmit(): void {
       next: (res) => {
         console.log('User logged in successfully:', res);
         this.authservice.storeToken(res.token);
-        this.router.navigate(['/']); 
+        this.router.navigate(['/Userprofile']); 
       },
       error: (err) => {
         console.error('Error logging in:', err);

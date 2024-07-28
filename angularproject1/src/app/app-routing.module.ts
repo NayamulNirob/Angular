@@ -10,19 +10,26 @@ import { CreatestudentComponent } from './student/createstudent/createstudent.co
 import { UpdatestudentComponent } from './student/updatestudent/updatestudent.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
+import { AuthguardGuard } from './guard/authguard.guard';
+import { HomeComponent } from './home/home.component';
+import { LogoutComponent } from './logout/logout.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 const routes: Routes = [
-  {path:"student", component:ViewstudentComponent},
-  {path:"employee", component:EmployeeComponent},
-  {path:"location", component:LocationComponent},
-  {path:"createlocation", component:CreatelocationComponent},
-  {path:"updateLocation/:id", component:UpdatelocationComponent},  
-  {path:"createstudent", component:CreatestudentComponent},
-  {path:"updatestudent/:id", component:UpdatestudentComponent},
+  {path:"student", component:ViewstudentComponent,canActivate:[AuthguardGuard]},
+  {path:"employee", component:EmployeeComponent,canActivate:[AuthguardGuard]},
+  {path:"location", component:LocationComponent,canActivate:[AuthguardGuard]},
+  {path:"createlocation", component:CreatelocationComponent,canActivate:[AuthguardGuard]},
+  {path:"updateLocation/:id", component:UpdatelocationComponent,canActivate:[AuthguardGuard]},  
+  {path:"createstudent", component:CreatestudentComponent,canActivate:[AuthguardGuard]},
+  {path:"updatestudent/:id", component:UpdatestudentComponent,canActivate:[AuthguardGuard]},
   {path:"reg", component:RegistrationComponent},
-  {path:"login", component:LoginComponent}
-
-
+  {path:"home", component:HomeComponent},
+  {path:"login", component:LoginComponent},
+  {path:"logout", component:LogoutComponent},
+  {path:"Userprofile", component:UserprofileComponent,canActivate:[AuthguardGuard]},
+  {path:"**", redirectTo:'login' , pathMatch:'full'},
+  
     
 ];
 

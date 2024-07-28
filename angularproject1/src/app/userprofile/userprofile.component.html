@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>User Profile</h2>
+    <div *ngIf="user">
+      <img [src]="user.photo" alt="{{user.photo}}" style="width: 100px; height: auto;">
+      <p><strong>Name:</strong> {{ user.name }}</p>
+      <p><strong>Email:</strong> {{ user.email}}</p>
+
+    </div>
+    <div *ngIf="!user">
+      <p>Loading user profile...</p>
+    </div>
+  </div>
