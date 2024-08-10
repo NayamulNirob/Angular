@@ -129,6 +129,13 @@
       "email": "nayamulislam@gmail.com",
       "password": "123456789",
       "photo": "https://photos.google.com/photo/AF1QipNvWiIuBp5A6DEXH8Ohha7Xq6RUxbQliEiwu9EF"
+    },
+    {
+      "id": "9827",
+      "name": "Towhid Ahamed",
+      "email": "towhid@gmail.com",
+      "password": "102030",
+      "photo": "C:\\fakepath\\favicon.ico"
     }
   ],
   "locations": [
@@ -254,6 +261,22 @@
         "state": "ALASKA",
         "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
         "availableUnits": 1,
+        "wifi": true,
+        "laundry": null
+      }
+    },
+    {
+      "id": "405f",
+      "name": "Towhid",
+      "email": "towhid@gmail.com",
+      "cellNo": "+012536978",
+      "location": {
+        "id": "3447",
+        "name": "Sonkar Plaza",
+        "city": "Dhanmondi",
+        "state": "Dhaka",
+        "photo": "https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2024/02/17/mirpur.jpg",
+        "availableUnits": "12108",
         "wifi": true,
         "laundry": null
       }
