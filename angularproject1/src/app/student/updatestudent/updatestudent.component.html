@@ -16,9 +16,15 @@
             <input type="text" class="form-control" id="cellNo" formControlName="cellNo">
         </div>
 
+        <!-- <div class="mb-3">
+            <label for="location" class="form-label">Location:</label>
+            <select id="location" formGroupName="location" class="form-select" formControlName="location">
+                <option *ngFor="let loc of locations"  [ngValue]="loc">{{loc.name }}</option>
+            </select>
+        </div> -->
         <div class="mb-3">
             <label for="location" class="form-label">Location:</label>
-            <select id="location" formGroupName="location" class="form-select">
+            <select id="location"  class="form-select"  formGroupName="location"  [formControlName]="locations">
                 <option *ngFor="let loc of locations" [ngValue]="loc">{{ loc.name }}</option>
             </select>
         </div>

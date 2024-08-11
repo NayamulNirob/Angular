@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:sportsstore": "node dist/sportsstore/server/server.mjs"
+    "serve:ssr:sportsstore": "node dist/sportsstore/server/server.mjs",
+    "json": "json-server data.js -p 3500 -m authMiddleware.js"
   },
   "private": true,
   "dependencies": {

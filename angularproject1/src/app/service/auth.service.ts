@@ -38,6 +38,7 @@ login(credentials:{email:string;password:string}):Observable<AuthResponse>{
     map(users=>{
       if(users.length > 0){
         const user=users[0];
+        console.log(user);
         if(user.password === credentials.password){
           console.log(user.password);
           console.log(credentials.password);

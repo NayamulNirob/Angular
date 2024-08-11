@@ -87,14 +87,6 @@
       "photo": false
     },
     {
-      "id": "72f2",
-      "name": false,
-      "email": false,
-      "password": "2580",
-      "age": false,
-      "photo": false
-    },
-    {
       "id": "dad5",
       "name": "fyhdtyt",
       "email": "fdsgsradgfa@",
@@ -136,6 +128,40 @@
       "email": "towhid@gmail.com",
       "password": "102030",
       "photo": "C:\\fakepath\\favicon.ico"
+    },
+    {
+      "id": "24c4",
+      "name": "Raju Ahamed",
+      "email": "raju123@gmail.com",
+      "password": "1234",
+      "photo": "C:\\fakepath\\272327319_3112207365686880_2178541633286826863_n.jpg"
+    },
+    {
+      "id": "dabf",
+      "name": "Rizvi Ahamed",
+      "email": "rizvi123@gmail.com",
+      "password": "12345",
+      "photo": ""
+    },
+    {
+      "id": "c6ea",
+      "name": "nnnnn",
+      "email": "nmnmnm@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "f831",
+      "name": "dddddddd",
+      "email": "hsstanvir@gmail.com",
+      "password": "555555",
+      "photo": ""
+    },
+    {
+      "id": "df7d",
+      "name": "Abcd",
+      "email": "abcde@gmail.com",
+      "password": "123456",
+      "photo": "C:\\fakepath\\272327319_3112207365686880_2178541633286826863_n.jpg"
     }
   ],
   "locations": [
@@ -207,12 +233,12 @@
       "email": "nusu@gmail.com",
       "cellNo": "01856952214",
       "location": {
-        "id": "3447",
-        "name": "Sonkar Plaza",
-        "city": "Dhanmondi",
-        "state": "Dhaka",
-        "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-        "availableUnits": "65",
+        "id": "4",
+        "name": "Happy Homes Group",
+        "city": "Gary",
+        "state": "IN",
+        "photo": "https://angular.io/assets/images/tutorials/faa/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
+        "availableUnits": "1209",
         "wifi": true,
         "laundry": true
       }
@@ -223,14 +249,14 @@
       "email": "nir@gmail.com",
       "cellNo": "25345235",
       "location": {
-        "id": "4",
-        "name": "Happy Homes Group",
-        "city": "Gary",
-        "state": "IN",
-        "photo": "https://angular.io/assets/images/tutorials/faa/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
-        "availableUnits": 1,
+        "id": "3447",
+        "name": "Sonkar Plaza",
+        "city": "Dhanmondi",
+        "state": "Dhaka",
+        "photo": "https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2024/02/17/mirpur.jpg",
+        "availableUnits": "12108",
         "wifi": true,
-        "laundry": null
+        "laundry": true
       }
     },
     {
@@ -260,25 +286,9 @@
         "city": "Juneau",
         "state": "ALASKA",
         "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
-        "availableUnits": 1,
+        "availableUnits": "1203",
         "wifi": true,
-        "laundry": null
-      }
-    },
-    {
-      "id": "405f",
-      "name": "Towhid",
-      "email": "towhid@gmail.com",
-      "cellNo": "+012536978",
-      "location": {
-        "id": "3447",
-        "name": "Sonkar Plaza",
-        "city": "Dhanmondi",
-        "state": "Dhaka",
-        "photo": "https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2024/02/17/mirpur.jpg",
-        "availableUnits": "12108",
-        "wifi": true,
-        "laundry": null
+        "laundry": true
       }
     }
   ]
