@@ -1,0 +1,12 @@
+.header { 
+	color: green; 
+} 
+
+.container { 
+	display: flex; 
+	gap: 10px; 
+}
+
+.ico{
+    color: blue;
+}
