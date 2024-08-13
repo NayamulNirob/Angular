@@ -162,6 +162,13 @@
       "email": "abcde@gmail.com",
       "password": "123456",
       "photo": "C:\\fakepath\\272327319_3112207365686880_2178541633286826863_n.jpg"
+    },
+    {
+      "id": "4e90",
+      "name": "Nirjash ",
+      "email": "nirjash@gmail.com",
+      "password": "123456",
+      "photo": "C:\\fakepath\\14560242_1124317404289828_499115094570314503_ovf.jpg"
     }
   ],
   "locations": [
@@ -281,12 +288,12 @@
       "email": "nayamulislam@gmail.com",
       "cellNo": "123456",
       "location": {
-        "id": "2",
-        "name": "Warm Beds Housing Support",
-        "city": "Juneau",
-        "state": "ALASKA",
-        "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
-        "availableUnits": "1203",
+        "id": "3447",
+        "name": "Sonkar Plaza",
+        "city": "Dhanmondi",
+        "state": "Dhaka",
+        "photo": "https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2024/02/17/mirpur.jpg",
+        "availableUnits": "12108",
         "wifi": true,
         "laundry": true
       }
