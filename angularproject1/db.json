@@ -224,6 +224,16 @@
       "availableUnits": "12108",
       "wifi": true,
       "laundry": true
+    },
+    {
+      "id": "d979",
+      "name": "Purbo Raja bazar",
+      "city": "Framget",
+      "state": "Dhaka",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Farmgate%2C_Dhaka.jpg",
+      "availableUnits": "1301",
+      "wifi": true,
+      "laundry": true
     }
   ],
   "students": [
@@ -249,12 +259,12 @@
       "email": "nir@gmail.com",
       "cellNo": "25345235",
       "location": {
-        "id": "3447",
-        "name": "Sonkar Plaza",
-        "city": "Dhanmondi",
+        "id": "d979",
+        "name": "Purbo Raja bazar",
+        "city": "Framget",
         "state": "Dhaka",
-        "photo": "https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2024/02/17/mirpur.jpg",
-        "availableUnits": "12108",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Farmgate%2C_Dhaka.jpg",
+        "availableUnits": "1301",
         "wifi": true,
         "laundry": true
       }
