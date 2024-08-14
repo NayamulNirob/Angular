@@ -9,6 +9,7 @@ import { isPlatformBrowser } from '@angular/common';
   providedIn: 'root'
 })
 export class AuthService {
+
   private baseUrl: string = "http://localhost:3000/user";
 
   private currentUserSubject: BehaviorSubject<UserModel | null>;
@@ -17,10 +18,10 @@ export class AuthService {
   constructor(
 
     private http: HttpClient,
-    @Inject(PLATFORM_ID) private platformId: Object  // Injecting PLATFORM_ID to check if it's browser
+    @Inject(PLATFORM_ID) private platformId: Object  
   ) {
-    const storeUser = this.isBrowser() ? JSON.parse(localStorage.getItem('currentUser') || 'null') : null;
-    this.currentUserSubject = new BehaviorSubject<UserModel | null>(storeUser);
+    const storedUser = this.isBrowser() ? JSON.parse(localStorage.getItem('currentUser') || 'null') : null;
+    this.currentUserSubject = new BehaviorSubject<UserModel | null>(storedUser);
     this.currentUser$ = this.currentUserSubject.asObservable();
 
   }
@@ -33,7 +34,7 @@ export class AuthService {
 
     return this.http.post<UserModel>(this.baseUrl, user).pipe(
       map((newUser: UserModel) => {
-        const token = btoa(`${newUser.email}${newUser.password}`)
+        const token = btoa(`${newUser.email}${newUser.password}`);
         return { token, user: newUser } as AuthResponse;
       }),
       catchError(error => {
@@ -46,8 +47,7 @@ export class AuthService {
 
   login(credentials: { email: string; password: string }): Observable<AuthResponse> {
 
-    let params = new HttpParams();
-    params = params.append('email', credentials.email);
+    let params = new HttpParams().append('email', credentials.email);
 
     return this.http.get<UserModel[]>(`${this.baseUrl}`, { params }).pipe(
       map(users => {
@@ -122,13 +122,15 @@ export class AuthService {
   }
 
   storeUserProfile(user: UserModel): void {
-    localStorage.setItem('currentUser', JSON.stringify(user));
+    if (this.isBrowser()) {
+      localStorage.setItem('currentUser', JSON.stringify(user));
+    }
   }
 
   getUserProfileFromStore(): UserModel | null {
     if(this.isBrowser()){
       const userProfile = localStorage.getItem('currentUser');
-    return userProfile ? JSON.parse('currentUser') : null;
+    return userProfile ? JSON.parse(userProfile) : null;
     }
     return null;
   }
