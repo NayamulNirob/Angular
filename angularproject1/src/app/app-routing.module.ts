@@ -14,22 +14,37 @@ import { AuthguardGuard } from './guard/authguard.guard';
 import { HomeComponent } from './home/home.component';
 import { LogoutComponent } from './logout/logout.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { RoleGuard } from './guard/role.guard';
 
 const routes: Routes = [
   {path:"student", component:ViewstudentComponent,canActivate:[AuthguardGuard]},
   {path:"employee", component:EmployeeComponent,canActivate:[AuthguardGuard]},
-  {path:"location", component:LocationComponent,canActivate:[AuthguardGuard]},
-  {path:"createlocation", component:CreatelocationComponent,canActivate:[AuthguardGuard]},
-  {path:"updateLocation/:id", component:UpdatelocationComponent,canActivate:[AuthguardGuard]},  
-  {path:"createstudent", component:CreatestudentComponent,canActivate:[AuthguardGuard]},
-  {path:"updatestudent/:id", component:UpdatestudentComponent,canActivate:[AuthguardGuard]},
+  {path:"location", component:LocationComponent,canActivate:[AuthguardGuard,RoleGuard],
+    data:{role:'user'}
+  },
+  {path:"createlocation", component:CreatelocationComponent,canActivate:[AuthguardGuard,RoleGuard],
+    data:{role:'user'}
+  },
+  {path:"updateLocation/:id", component:UpdatelocationComponent,canActivate:[AuthguardGuard,RoleGuard],
+    data:{role:'Admin'}
+  },  
+  {path:"createstudent", component:CreatestudentComponent,canActivate:[AuthguardGuard,RoleGuard]
+  },
+  {path:"updatestudent/:id", component:UpdatestudentComponent,canActivate:[AuthguardGuard,RoleGuard],
+    data:{role:'Admin'}},
   {path:"reg", component:RegistrationComponent},
   {path:"home", component:HomeComponent},
   {path:"login", component:LoginComponent},
   {path:"logout", component:LogoutComponent},
   {path:"Userprofile", component:UserprofileComponent,canActivate:[AuthguardGuard]},
+  {
+    path:'userProfile',
+    component:UserprofileComponent,
+    canActivate:[AuthguardGuard,RoleGuard],
+    data:{role:['Admin','user']}
+  },
   {path:"**", redirectTo:'login' , pathMatch:'full'},
-  
+
     
 ];
 

@@ -1,174 +1,43 @@
 {
   "user": [
     {
+      "id": "6590",
+      "name": "nayamulislam",
+      "email": "nayamulislam@gmail.com",
+      "password": "12345",
+      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+      "role": "Admin"
+    },
+    {
       "id": "1",
       "Name": "Raju Ahamed",
       "email": "rajuahamed@gmail.com",
-      "password": "12345"
+      "password": "12345",
+      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+      "role": "user"
     },
     {
       "id": "2",
       "Name": " Rofiql Islam",
       "email": "rofiqul@gmail.com",
-      "password": "54321"
-    },
-    {
-      "id": "4146",
-      "name": "Rofiql Islam",
-      "email": "nayamul@gmail.com",
-      "password": "9876543214"
+      "password": "54321",
+      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+      "role": "user"
     },
     {
       "id": "cd28",
       "name": "Nirjash",
       "email": "nirjash@gmail.com",
-      "password": "2020"
+      "password": "2020",
+      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+      "role": "user"
     },
     {
-      "id": "6590",
-      "name": "nayamulislam",
-      "email": "nayamulislam@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": "086d",
-      "name": "Nir",
-      "email": "nir@gmail.com",
-      "password": "00000"
-    },
-    {
-      "id": "e2f6",
-      "name": "MD NAYAMUL ISLAM",
-      "email": "1302neyamulislamnirob@gmail.com",
-      "password": "123456",
-      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg"
-    },
-    {
-      "id": "0c5e",
+      "id": "5cbc",
       "name": "abc",
       "email": "abc@gmail.com",
-      "password": "2020",
-      "photo": ""
-    },
-    {
-      "id": "ba3a",
-      "name": "NAY",
-      "email": "nay@gmail.com",
-      "password": "1010",
-      "photo": "C:\\fakepath\\14560242_1124317404289828_499115094570314503_ovf.jpg"
-    },
-    {
-      "id": "2c29",
-      "name": "XYZ",
-      "email": "xyz@gmail.com",
-      "password": "3030",
+      "password": "1111",
       "photo": "C:\\fakepath\\278984540_3167143610193255_614176764465450574_n.jpg"
-    },
-    {
-      "id": "7e99",
-      "name": "nayamulislam",
-      "email": "nayamulislam@gmail.com",
-      "password": "1020",
-      "photo": "C:\\fakepath\\14560242_1124317404289828_499115094570314503_ovf.jpg"
-    },
-    {
-      "id": "1973",
-      "name": "Nusu",
-      "email": "nusu@gmail.com",
-      "password": "7896",
-      "photo": "C:\\fakepath\\272868544_3112207369020213_5492546927594439610_n.jpg"
-    },
-    {
-      "id": "f72a",
-      "name": "ADD",
-      "email": "avc@gh.com",
-      "password": "1020",
-      "age": false,
-      "photo": false
-    },
-    {
-      "id": "dad5",
-      "name": "fyhdtyt",
-      "email": "fdsgsradgfa@",
-      "password": "4567",
-      "age": false,
-      "photo": false
-    },
-    {
-      "id": "b65e",
-      "name": "Nayamul lslam",
-      "email": "nayamulislam@gmail.com",
-      "password": "102030",
-      "photo": "C:\\fakepath\\14560242_1124317404289828_499115094570314503_ovf.jpg"
-    },
-    {
-      "id": "b641",
-      "name": "gjjg",
-      "email": "abcdefg@hghh.com",
-      "password": "10203040",
-      "photo": "C:\\fakepath\\272977200_3110062512568032_4144848652242639043_n.jpg"
-    },
-    {
-      "id": "37d8",
-      "name": "Shawon",
-      "email": "shawon@gmail.com",
-      "password": "1234",
-      "photo": "C:\\fakepath\\274208446_3122906687950281_3743521531588765186_n.jpg"
-    },
-    {
-      "id": "7c5c",
-      "name": "Neyamul Islam",
-      "email": "nayamulislam@gmail.com",
-      "password": "123456789",
-      "photo": "https://photos.google.com/photo/AF1QipNvWiIuBp5A6DEXH8Ohha7Xq6RUxbQliEiwu9EF"
-    },
-    {
-      "id": "9827",
-      "name": "Towhid Ahamed",
-      "email": "towhid@gmail.com",
-      "password": "102030",
-      "photo": "C:\\fakepath\\favicon.ico"
-    },
-    {
-      "id": "24c4",
-      "name": "Raju Ahamed",
-      "email": "raju123@gmail.com",
-      "password": "1234",
-      "photo": "C:\\fakepath\\272327319_3112207365686880_2178541633286826863_n.jpg"
-    },
-    {
-      "id": "dabf",
-      "name": "Rizvi Ahamed",
-      "email": "rizvi123@gmail.com",
-      "password": "12345",
-      "photo": ""
-    },
-    {
-      "id": "c6ea",
-      "name": "nnnnn",
-      "email": "nmnmnm@gmail.com",
-      "password": "123456789"
-    },
-    {
-      "id": "f831",
-      "name": "dddddddd",
-      "email": "hsstanvir@gmail.com",
-      "password": "555555",
-      "photo": ""
-    },
-    {
-      "id": "df7d",
-      "name": "Abcd",
-      "email": "abcde@gmail.com",
-      "password": "123456",
-      "photo": "C:\\fakepath\\272327319_3112207365686880_2178541633286826863_n.jpg"
-    },
-    {
-      "id": "4e90",
-      "name": "Nirjash ",
-      "email": "nirjash@gmail.com",
-      "password": "123456",
-      "photo": "C:\\fakepath\\14560242_1124317404289828_499115094570314503_ovf.jpg"
     }
   ],
   "locations": [

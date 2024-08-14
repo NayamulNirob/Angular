@@ -32,6 +32,7 @@ onSubmit(): void {
       next: (res) => {
         console.log('User logged in successfully:', res);
         this.authservice.storeToken(res.token);
+        const role =this.authservice.getUserRole();
         this.router.navigate(['/Userprofile']); 
       },
       error: (err) => {

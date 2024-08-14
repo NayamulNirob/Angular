@@ -3,6 +3,7 @@ import { UserModel } from '../model/user.model';
 import { UserprofileService } from '../service/userprofile.service';
 import { Router } from '@angular/router';
 import { error } from 'console';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-userprofile',
@@ -12,7 +13,8 @@ import { error } from 'console';
 
 export class UserprofileComponent {
 
-  user!: UserModel;
+  user: UserModel |null=null;
+  private subscription:Subscription =new Subscription();
 
   constructor(
     private userProfileService: UserprofileService,
@@ -23,7 +25,7 @@ export class UserprofileComponent {
     this.loadUserProfile();
   }
   loadUserProfile(): void {
-    this.userProfileService.getUserProfile().subscribe({
+    const sub = this.userProfileService.getUserProfile().subscribe({
 
       next: (user) => {
         if (user) {
@@ -34,7 +36,12 @@ export class UserprofileComponent {
         console.error('Error Loading User Profile:', err);
       }
     });
+    this.subscription.add(sub);
 
+  }
+
+  ngOnDestroy():void{
+    this.subscription.unsubscribe();
   }
 
 
