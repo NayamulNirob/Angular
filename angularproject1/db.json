@@ -42,16 +42,6 @@
   ],
   "locations": [
     {
-      "id": "1",
-      "name": "Pc Culture Housing Society",
-      "city": "Dhaka",
-      "state": "Mohammodpur",
-      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-      "availableUnits": "1207",
-      "wifi": true,
-      "laundry": true
-    },
-    {
       "id": "2",
       "name": "Warm Beds Housing Support",
       "city": "Juneau",
@@ -175,6 +165,22 @@
         "availableUnits": "12108",
         "wifi": true,
         "laundry": true
+      }
+    },
+    {
+      "id": "400f",
+      "name": "Md Nayamul lslam",
+      "email": "nayamulislam@gmail.com",
+      "cellNo": "1245344",
+      "location": {
+        "id": "2",
+        "name": "Warm Beds Housing Support",
+        "city": "Juneau",
+        "state": "ALASKA",
+        "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+        "availableUnits": "1203",
+        "wifi": true,
+        "luandry": null
       }
     }
   ]

@@ -17,21 +17,13 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { RoleGuard } from './guard/role.guard';
 
 const routes: Routes = [
-  {path:"student", component:ViewstudentComponent,canActivate:[AuthguardGuard]},
-  {path:"employee", component:EmployeeComponent,canActivate:[AuthguardGuard]},
-  {path:"location", component:LocationComponent,canActivate:[AuthguardGuard,RoleGuard],
-    data:{role:'user'}
-  },
-  {path:"createlocation", component:CreatelocationComponent,canActivate:[AuthguardGuard,RoleGuard],
-    data:{role:'user'}
-  },
-  {path:"updateLocation/:id", component:UpdatelocationComponent,canActivate:[AuthguardGuard,RoleGuard],
-    data:{role:'Admin'}
-  },  
-  {path:"createstudent", component:CreatestudentComponent,canActivate:[AuthguardGuard,RoleGuard]
-  },
-  {path:"updatestudent/:id", component:UpdatestudentComponent,canActivate:[AuthguardGuard,RoleGuard],
-    data:{role:'Admin'}},
+  {path:"student", component:ViewstudentComponent,canActivate:[AuthguardGuard,RoleGuard],data:{role:'Admin,user'}},
+  {path:"employee", component:EmployeeComponent,canActivate:[AuthguardGuard,RoleGuard],data:{role:'Admin'}},
+  {path:"location", component:LocationComponent,canActivate:[AuthguardGuard,RoleGuard],data:{role:'user,Admin'}},
+  {path:"createlocation", component:CreatelocationComponent,canActivate:[AuthguardGuard,RoleGuard],data:{role:'Admin'}},
+  {path:"updateLocation/:id", component:UpdatelocationComponent,canActivate:[AuthguardGuard,RoleGuard],data:{role:'Admin'}},  
+  {path:"createstudent", component:CreatestudentComponent,canActivate:[AuthguardGuard,RoleGuard],data:{role:'Admin'}},
+  {path:"updatestudent/:id", component:UpdatestudentComponent,canActivate:[AuthguardGuard,RoleGuard],data:{role:'Admin'}},
   {path:"reg", component:RegistrationComponent},
   {path:"home", component:HomeComponent},
   {path:"login", component:LoginComponent},
