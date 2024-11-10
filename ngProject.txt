@@ -1,0 +1,36 @@
+Merchandise Management Enterprise Resource Planning
+
+1.create a file : ng new merchandiseMgmtERP --no-standalone
+2. ng add @fortawesome/angular-fontawesome
+3.npm install @fortawesome/fontawesome-free
+4.npm install @fortawesome/angular-fontawesome
+5."node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+6. npm i bootstrap@5.3.3
+7."node_modules/bootstrap/dist/css/bootstrap.min.css"
+8."node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+9.npm install -g json-server
+10.npm install jsonwebtoken
+11.ng update @angular/core@18 @angular/cli@18 
+12.npm install --save font-awesome angular-font-awesome
+13.npm install @fortawesome/angular-fontawesome-free
+
+
+ng add @angular/material  
+npm install ng2-charts chart.js --save
+
+rm -rf node_modules  
+npm install
+
+npm update @angular/core @angular/cli @angular/compiler-cli
+npm install
+
+ng cache clean
+ng build --prod
+
+rm -rf node_modules
+npm install
+
+node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build
+
+npm audit fix --force
+
