@@ -1,0 +1,13 @@
+
+
+1.create a file : ng new merchandiseMgmtERP --no-standalone
+2.add frontAwsoem : ng add @fortawesome/angular-fontawesome
+3.npm install @fortawesome/fontawesome-free
+4.npm install @fortawesome/angular-fontawesome
+5."node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+6. npm i bootstrap@5.3.3
+7."node_modules/bootstrap/dist/css/bootstrap.min.css"
+8."node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+9.npm install -g json-server
+10.npm install jsonwebtoken
+11.ng update @angular/core@18 @angular/cli@18 

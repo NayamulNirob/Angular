@@ -1,0 +1,81 @@
+git config --global http.postBuffer 1073741824
+
+git config --global http.postBuffer 2147483648
+
+git config --global http.postBuffer 4294967296
+
+git config http.postBuffer 524288000
+
+
+git config --global http.postBuffer 12949672960
+
+git config --global --get http.postBuffer
+
+git clone https://github.com/NayamulNirob/MerchandiseMgmtERP.git
+
+git clone https://github.com/NayamulNirob/AndroidStudio.git
+
+git clone https://github.com/NayamulNirob/AndroidStudio_JAVA_Projects.git
+
+git clone https://github.com/NayamulNirob/Extra.git
+
+GIT_CURL_VERBOSE=1 GIT_TRACE=1 git clone https://github.com/NayamulNirob/AndroidStudio.git
+
+
+git pull origin main
+
+
+git clone --filter=blob:none --no-checkout https://github.com/NayamulNirob/AndroidStudio.git
+
+git clone --filter=blob:none --no-checkout https://github.com/NayamulNirob/Extra.git
+
+CODE FOR PC HIDEEN SETTING
+{ED7BA470-8E54-465E-825C-99712043E01C}
+
+
+Check for Large File Issues:
+If you are trying to push a large file, GitHub has specific size limits. If you include any large files, see if they are within the size limitations. You may need to use Git LFS (Large File Storage) if you are handling large files:
+
+git lfs install  
+git lfs track "*.psd"  # example for a Photoshop file  
+git add .gitattributes  
+
+
+
+Verbose Output for Debugging:
+You can obtain more information about the push command by using the verbose flag:
+
+GIT_CURL_VERBOSE=1 git push origin main  
+
+
+Step 2: Increase the http.postBuffer
+Since you mentioned previously that you set the http.postBuffer, if you’re still encountering issues, consider increasing it even more. For example, set it to 2 GB (or higher if necessary, depending on your use case):
+
+git config --global http.postBuffer 2147483648  
+Step 3: Use Shallow Clone
+If you don’t need the full history of the repository, you can perform a shallow clone. This can help reduce the amount of data transferred:
+
+git clone --depth 1 <repository-url>  
+Step 4: Disable Compression
+Another option is to disable compression, which can sometimes help with clones of large repositories:
+
+git config --global core.compression 0  
+Step 5: Try Different Network Options
+Sometimes changing the protocol helps:
+
+Use SSH Instead of HTTPS (If you have access):
+
+git clone git@github.com:username/repo.git  
+Clone from a Different Network: If possible, try cloning from a different network to see if your current ISP is causing issues.
+
+Step 6: Retry After Making Changes
+After applying any of the above changes, retry cloning the repository:
+
+git clone <repository-url>  
+Step 7: Check Repository Size and Server Status
+If you are still experiencing problems:
+
+Repository Size: Check if the repository is excessively large; this may require optimizations on the server side.
+Server Status: If the repository is hosted on a platform like GitHub, GitLab, or Bitbucket, check their status pages for any ongoing issues or outages that could be affecting your clone operation.
+Step 8: Clone Using a Different Git Client
+If you continue to encounter problems, consider using a different Git client (e.g., GitHub Desktop, SourceTree) to see if the issue is specific to your current setup.
