@@ -5,7 +5,7 @@ import { NavbarComponent } from './design/navbar/navbar.component';
 const routes: Routes = [
   {path:"navbar",component:NavbarComponent},
 ];
-
+ 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
