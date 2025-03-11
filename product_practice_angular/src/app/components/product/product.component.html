@@ -1,0 +1,54 @@
+<div class="container">
+    <h2>Product Management</h2>
+  
+    <!-- Add Product Form -->
+    <div class="form-container">
+      <h3>Add / Edit Product</h3>
+      <form (submit)="addProduct(); $event.preventDefault()">
+        <label for="name">Name:</label>
+        <input type="text" id="name"   />
+  
+        <label for="description">Description:</label>
+        <input type="text" id="description" />
+  
+        <label for="price">Price:</label>
+        <input type="number" id="price" />
+  
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" />
+  
+        <button type="submit">Save Product</button>
+      </form>
+    </div>
+  
+    <!-- Product List -->
+    <div class="product-list">
+      <h3>Product List</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.description }}</td>
+            <td>${{ product.price }}</td>
+            <td>{{ product.stock }}</td>
+            <td>
+              <button (click)="editProduct(product.id)">Edit</button>
+              <button (click)="deleteProduct(product.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
