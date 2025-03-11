@@ -34,3 +34,7 @@ node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build
 
 npm audit fix --force
 
+ng add ng-zorro-antd
+
+ng g m admin --routing=true
+
