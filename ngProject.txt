@@ -36,5 +36,7 @@ npm audit fix --force
 
 ng add ng-zorro-antd
 
-ng g m admin --routing=true
+ng g m modulename --routing=true
+
+json-server --watch db.json
 
