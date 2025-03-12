@@ -1,0 +1,60 @@
+<div class="container">
+    <h2>Country Management</h2>
+
+    <!-- <label for="id">ID:</label>
+    <input type="number" [(ngModel)]="country.id" placeholder="Enter ID" />
+   -->
+    <label for="name">Name:</label>
+    <input type="text" [(ngModel)]="country.name" placeholder="Enter Name" />
+
+    <label for="code">Bussiness:</label>
+    <input type="text" [(ngModel)]="country.bussiness" placeholder="Enter Code" />
+
+    <label for="code">Progress:</label>
+    <input type="text" [(ngModel)]="country.progress" placeholder="Enter Code" />
+
+    <label for="code">Status:</label>
+    <input type="text" [(ngModel)]="country.status" placeholder="Enter Code" />
+
+    <label for="code">Sell:</label>
+    <input type="text" [(ngModel)]="country.sale" placeholder="Enter Code" />
+
+    <button (click)="saveCountry()">Add Country</button>
+    
+
+    <hr />
+
+    <label for="searchId">Find Country by ID:</label>
+    <input type="number" [(ngModel)]="countryId" placeholder="Enter ID" />
+    <button (click)="getCountryById(countryId)">Search</button>
+
+    <hr />
+
+    <h3>Country List</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let country of countries">
+                <td>{{ country.id }}</td>
+                <td>{{ country.name }}</td>
+                <td>{{ country.bussiness }}</td>
+                <td>{{ country.sale }}</td>
+                <td>{{ country.progress }}</td>
+                <td>{{ country.status}}</td>
+                <td>
+                    <button (click)="deleteCountry(country.id)">Delete</button>
+                </td>
+                <td>
+                    <button (click)="updateCountry(country.id)">Update</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
