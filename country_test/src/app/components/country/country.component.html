@@ -1,42 +1,75 @@
 <div class="container">
-    <h2>Country Management</h2>
 
-    <!-- <label for="id">ID:</label>
-    <input type="number" [(ngModel)]="country.id" placeholder="Enter ID" />
-   -->
-    <label for="name">Name:</label>
-    <input type="text" [(ngModel)]="country.name" placeholder="Enter Name" />
-
-    <label for="code">Bussiness:</label>
-    <input type="text" [(ngModel)]="country.bussiness" placeholder="Enter Code" />
-
-    <label for="code">Progress:</label>
-    <input type="text" [(ngModel)]="country.progress" placeholder="Enter Code" />
-
-    <label for="code">Status:</label>
-    <input type="text" [(ngModel)]="country.status" placeholder="Enter Code" />
-
-    <label for="code">Sell:</label>
-    <input type="text" [(ngModel)]="country.sale" placeholder="Enter Code" />
-
-    <button (click)="saveCountry()">Add Country</button>
+    <div class="container mt-4">
+        <h2 class="mb-4 text-primary text-center">Country Management</h2>
     
+        <div class="card">
+            <div class="card-body">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="country.name" name="name" placeholder="Enter Name">
+                    </div>
+    
+                    <div class="col-md-6">
+                        <label for="business" class="form-label">Business</label>
+                        <input type="text" class="form-control" id="business" [(ngModel)]="country.bussiness" name="business" placeholder="Enter Business">
+                    </div>
+    
+                    <div class="col-md-4">
+                        <label for="progress" class="form-label">Progress</label>
+                        <input type="text" class="form-control" id="progress" [(ngModel)]="country.progress" name="progress" placeholder="Enter Progress">
+                    </div>
+    
+                    <div class="col-md-4">
+                        <label for="status" class="form-label">Status</label>
+                        <input type="text" class="form-control" id="status" [(ngModel)]="country.status" name="status" placeholder="Enter Status">
+                    </div>
+    
+                    <div class="col-md-4">
+                        <label for="sell" class="form-label">Sell</label>
+                        <input type="text" class="form-control" id="sell" [(ngModel)]="country.sale" name="sell" placeholder="Enter Sell">
+                    </div>
+    
+                    <div class="col-12">
+                        <button class="btn btn-primary" (click)="saveCountry()">Add Country</button>
+                    </div>
 
-    <hr />
 
-    <label for="searchId">Find Country by ID:</label>
-    <input type="number" [(ngModel)]="countryId" placeholder="Enter ID" />
-    <button (click)="getCountryById(countryId)">Search</button>
-
-    <hr />
+                    <div class="col-12">
+                        <button class="btn btn-primary" (click)="updateCountry(country.id)">Update Country</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="searchId" class="form-label">Find Country by ID</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="number" class="form-control" id="searchId" [(ngModel)]="countryId" name="searchId" placeholder="Enter ID">
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-secondary" (click)="getCountryById(countryId)">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <h3>Country List</h3>
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Code</th>
+                <th>Bussiness</th>
+                <th>Sale</th>
+                <th>Progress</th>
+                <th>Status</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -51,9 +84,7 @@
                 <td>
                     <button (click)="deleteCountry(country.id)">Delete</button>
                 </td>
-                <td>
-                    <button (click)="updateCountry(country.id)">Update</button>
-                </td>
+                
             </tr>
         </tbody>
     </table>
