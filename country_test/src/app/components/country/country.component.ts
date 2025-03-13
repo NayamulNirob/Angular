@@ -37,7 +37,7 @@ export class CountryComponent {
   saveCountry(): void {
     this.countryService.saveCountry(this.country).subscribe({
       next: () => {
-       this.country = new Country();
+        this.reset();
        this.getAllCountries();
       },
       error: (err: any) => {
@@ -51,6 +51,7 @@ export class CountryComponent {
     if (countryId) {
       this.countryService.removeCountry(countryId).subscribe(success => {
         if (success) {
+          this.reset();
           this.getAllCountries();
         }
       });
@@ -61,8 +62,9 @@ export class CountryComponent {
     if(this.country){
       this.countryService.updateCountry(countryId, this.country).subscribe({
         next: () => {
-          this.country = new Country();
+          this.reset();
           this.getAllCountries();
+
         }
       });
     }
