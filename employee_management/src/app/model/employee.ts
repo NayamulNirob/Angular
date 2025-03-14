@@ -10,5 +10,4 @@ export class Employee {
     address!:string;
 
     education!: Education;
-
 }

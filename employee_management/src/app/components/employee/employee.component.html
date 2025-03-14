@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="container mt-4">
+        <h2 class="text-primary text-center"> Employee Details</h2>
+        <div class="card">
+            <div class="card-body">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="employee.firstName" name="name"
+                            placeholder="Enter Name">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="employee.lastName" name="lastname"
+                            placeholder="Enter Name">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email" [(ngModel)]="employee.email" name="email"
+                            placeholder="Enter Email">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="phone" [(ngModel)]="employee.phone" name="phone"
+                            placeholder="Enter Phone">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address" [(ngModel)]="employee.address"
+                            name="address" placeholder="Enter Address">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="education" class="form-label">Education</label>
+                        <select class="form-control" id="education" [(ngModel)]="employee.education" name="education">
+                            <option *ngFor="let edu of education" [value]="edu.educationId">{{edu.educationName}}</option>
+                        </select>
+                    </div>
+
+                    <div class="col-2">
+                        <button class="btn btn-primary" (click)="addEmployee()">Add Employee</button>
+                    </div>
+
+
+                    <div class="col-2">
+                        <button class="btn btn-primary" (click)="updateEmployee(employee.id)">Update Employee</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="table-responsive mt-4">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">FirstName</th>
+                    <th scope="col">Lastname</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Education</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of employees">
+                    <td>{{emp.id}}</td>
+                    <td>{{emp.firstName}}</td>
+                    <td>{{emp.lastName}}</td>
+                    <td>{{emp.address}}</td>
+                    <td>{{emp.phone}}</td>
+                    <td>{{emp.email}}</td>
+                    <td>{{emp.education.educationName}}</td>
+                    <td>
+                        <button class="btn btn-primary me-2" (click)="updateEmployee(emp.id)">Edit</button>
+                        <button class="btn btn-danger" (click)="removeEmployee(emp.id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

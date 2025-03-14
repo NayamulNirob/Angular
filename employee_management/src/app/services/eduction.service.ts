@@ -13,20 +13,20 @@ export class EductionService {
   private baseUrl="http://localhost:8080/api/education/";
 
 
-  getAllEducation(){
-    return this.http.get(this.baseUrl+'get');
+  getAllEducation():Observable<Education[]>{
+    return this.http.get<Education[]>(this.baseUrl+'get');
   }
 
 
-  addEducation(education:Education){
-    return this.http.post(this.baseUrl+'save',education);
+  addEducation(education:Education):Observable<Education>{
+    return this.http.post<Education>(this.baseUrl+'save',education);
   }
 
-  updateEducation(education:Education,id:number){
-    return this.http.put(`${this.baseUrl}update${id}`,education);
+  updateEducation(education:Education,id:number):Observable<Education>{
+    return this.http.put<Education>(`${this.baseUrl}update${id}`,education);
   }
 
-  deleteEducation(id:number){
-    return this.http.delete(`${this.baseUrl}delete${id}`,{responseType:'text'});
+  deleteEducation(id:number):Observable<Education>{
+    return this.http.delete<Education>(`${this.baseUrl}delete${id}`);
   }
 }
