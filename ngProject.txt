@@ -42,3 +42,5 @@ json-server --watch db.json
 
 ng update @angular/core@19 @angular/cli@19
 
+npm init -y // for pakage.json file
+
