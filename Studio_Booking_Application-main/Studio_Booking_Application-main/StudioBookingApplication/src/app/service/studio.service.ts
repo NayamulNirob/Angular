@@ -12,7 +12,7 @@ export class StudioService {
     constructor(private http: HttpClient) {}
 
     private apiUrl = 'http://localhost:3000/Studios';
-    // private apiUrlbooking = 'http://localhost:3000/bookings';
+    
 
     getStudios(): Observable<Studio[]> {
         return this.http.get<Studio[]>(this.apiUrl);
