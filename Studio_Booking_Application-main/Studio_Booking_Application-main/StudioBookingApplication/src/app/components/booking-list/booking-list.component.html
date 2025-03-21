@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Booking List</h2>
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>Email</th>
+          <th>Studio</th>
+          <th>Type</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings">
+          <td>{{ booking.user.name }}</td>
+          <td>{{ booking.user.email }}</td>
+          <td>{{ booking.studio }}</td>
+          <td>{{ getStudioType(booking.studio) }}</td>
+          <td>{{ getStudioLocation(booking.studio) }}</td>
+          <td>{{ booking.date }}</td>
+          <td>{{ booking.time }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<!-- <input type="text" [(ngModel)]="searchQuery" (input)="filterStudios()" placeholder="Search by area" list="autoCompleteList">
+<datalist id="autoCompleteList">
+  <option *ngFor="let area of autoCompleteList" [value]="area"></option>
+</datalist>
+
+<button (click)="searchByRadius()">Search by Radius ({{ radius }} km)</button>
+
+<div *ngFor="let studio of filteredStudios; trackBy: trackById" class="studio-card">
+    <h3>{{ studio.Name }}</h3>
+    <p>Type: {{ studio.Type }}</p>
+    <p>Location: {{ studio.Location.City }}, {{ studio.Location.Area }}, {{ studio.Location.Address }}</p>
+    <p>Amenities: {{ studio.Amenities.join(', ') }}</p>
+    <p>Price: {{ studio.PricePerHour }} {{ studio.Currency }}</p>
+    <p>Rating: {{ studio.Rating }}</p>
+    <img [src]="studio.Images[0]" alt="{{ studio.Name }}" />
+
+    <button (click)="selectStudio(studio)">Book Now</button>
+</div>
+
+<app-booking *ngIf="selectedStudio" [studio]="selectedStudio" (close)="closeBookingPopup()"></app-booking> -->
+
+
+<div class="container mt-4">
+  <!-- Search Bar and View Booking List Button -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="input-group">
+      <input 
+        type="text" 
+        [(ngModel)]="searchQuery" 
+        (input)="filterStudios()" 
+        class="form-control rounded-pill shadow-sm" 
+        placeholder="Search by area..." 
+        list="autoCompleteList">
+      <datalist id="autoCompleteList">
+        <option *ngFor="let area of autoCompleteList" [value]="area"></option>
+      </datalist>
+    </div>
+    <button class="btn btn-primary btn-lg shadow-sm ms-3" (click)="searchByRadius()">
+      🔍 Search by Radius ({{ radius }} km)
+    </button>
+    <button class="btn btn-secondary btn-lg shadow-sm ms-3" (click)="viewBookingList()">
+      📋 View Booking List
+    </button>
+  </div>
+
+  <!-- Studios List -->
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let studio of filteredStudios; trackBy: trackById" class="col">
+      <div class="card studio-card shadow-lg border-0">
+        <img [src]="studio.Images[0]" class="card-img-top fixed-image" alt="{{ studio.Name }}">
+        <div class="card-body text-center">
+          <h5 class="card-title text-primary">{{ studio.Name }}</h5>
+          <p class="card-text"><i class="bi bi-building text-secondary"></i> <strong>Type:</strong> {{ studio.Type }}</p>
+          <p class="card-text"><i class="bi bi-geo text-info"></i> <strong>Location:</strong> {{ studio.Location.City }}, {{ studio.Location.Area }}</p>
+          <p class="card-text"><i class="bi bi-list text-warning"></i> <strong>Amenities:</strong> {{ studio.Amenities.join(', ') }}</p>
+          <p class="card-text"><i class="bi bi-cash text-success"></i> <strong>Price:</strong> {{ studio.PricePerHour }} {{ studio.Currency }}</p>
+          <p class="card-text" [innerHTML]="getStars(studio.Rating)"></p>
+          <button class="btn btn-success w-100 fw-bold shadow-sm" (click)="selectStudio(studio)">
+            🎟️ Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Booking Popup -->
+<app-booking *ngIf="selectedStudio" [studio]="selectedStudio" (close)="closeBookingPopup()"></app-booking>
+
