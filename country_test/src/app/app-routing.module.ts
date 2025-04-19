@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CountryComponent } from './components/country/country.component';
 
 const routes: Routes = [
-  {path:'country',component:CountryComponent}
+  {path:'country',component:CountryComponent},
+  {path:'',redirectTo:'country',pathMatch:'full'},
 ];
 
 @NgModule({
