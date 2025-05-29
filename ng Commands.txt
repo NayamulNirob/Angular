@@ -1,0 +1,87 @@
+🛠️ Project Setup & Configuration
+Command	Description
+ng new [project-name]	Create a new Angular project.
+ng config	Get or set Angular CLI configuration values.
+ng analytics	Configure analytics collection.
+
+🚀 Development & Build
+Command	Description
+ng serve	Compiles the app and runs a development server at http://localhost:4200/.
+ng serve --open      # Opens browser automatically
+ng serve --port 4300 # Use custom port
+ng build	Compiles the app into an output directory (dist/). Use --prod for production build.
+ng test	Run unit tests using Karma.
+ng lint	Lint code using the configured linter.
+ng e2e	Run end-to-end tests using Protractor or Cypress (if configured).
+ng build
+ng build --prod
+
+
+📦 Generate (Scaffold Code)
+Command	Description
+ng generate component [name] or ng g c [name]	Create a new component.
+ng generate directive [name] or ng g d [name]	Create a new directive.
+ng generate pipe [name] or ng g p [name]	Create a new pipe.
+ng generate service [name] or ng g s [name]	Create a new service.
+ng generate module [name] or ng g m [name]	Create a new module.
+ng generate class [name] or ng g cl [name]	Create a new class.
+ng generate guard [name] or ng g g [name]	Create a new route guard.
+ng generate interface [name] or ng g i [name]	Create a new interface.
+ng generate enum [name] or ng g e [name]	Create a new enum.
+
+🔧 Advanced Commands
+Command	Description
+ng update	Update Angular and its dependencies.
+ng add [package]	Add a library (e.g. ng add @angular/material).
+ng deploy	Deploy the application using a configured builder.
+ng doc [keyword]	Opens the official Angular documentation in a browser.
+ng extract-i18n	Extract i18n messages from templates.
+
+📁 Workspace and Schematic Management
+Command	Description
+ng generate application [name]	Generate a new application in a workspace.
+ng generate library [name]	Generate a library project.
+
+✅ Common Flags and Options
+Option	Description
+--prod	Optimize the build for production.
+--routing	Include routing module when generating modules.
+--style=scss	Set default style format (css, scss, sass, less).
+--skip-tests	Skip generating test files.
+
+| Feature   | Command Example       |
+| --------- | --------------------- |
+| Component | `ng g c user-profile` |
+| Service   | `ng g s auth`         |
+| Module    | `ng g m admin`        |
+| Directive | `ng g d highlight`    |
+| Pipe      | `ng g p capitalize`   |
+| Guard     | `ng g g auth`         |
+| Interface | `ng g i user`         |
+| Enum      | `ng g e role`         |
+| Class     | `ng g cl helper`      |
+
+Tip: Add --skip-tests to skip generating test files.
+
+ng g m user --route user --module app
+
+
+
+ng add @angular/material
+ng add @ng-bootstrap/ng-bootstrap
+ng lint
+ng test
+ng update
+ng build --configuration=production
+ng build --configuration=development
+
+🔹 Create Reusable Library (Monorepo)
+ng generate library shared
+
+npm install -g json-server
+npm install json-server --save-dev
+json-server --watch db.json
+json-server --watch db.json --port 4000
+
+
+
