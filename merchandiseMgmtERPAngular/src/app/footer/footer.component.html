@@ -1,0 +1,48 @@
+
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>About Us</h3>
+        <p>
+          We are a team of passionate developers providing the best tech solutions.
+          Contact us for any inquiries or collaborations!
+        </p>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+  
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a routerLink="/dashbord">Home</a></li>
+          <li><a routerLink="/inventory">Services</a></li>
+          <li><a routerLink="/reports">Reports & Analytics</a></li>
+          <li><a routerLink="/country">Countries</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section contact-form">
+        <h3>Newsletter</h3>
+        <form (submit)="subscribeToNewsletter()">
+          <input type="email" [(ngModel)]="email" name="email" placeholder="Your Email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+  
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-phone"></i> +123-456-7890</p>
+        <p><i class="fas fa-envelope"></i> mgterp.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123, Dhaka, Bangladesh</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      &copy; {{ currentYear }} | Designed by MGTERP
+    </div>
+  </footer>
+  

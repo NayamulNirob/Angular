@@ -1,0 +1,33 @@
+
+<div class="container mt-4">  
+    <h2 class="h2">Edit Product</h2>  
+    <div *ngIf="errorMessage" class="alert alert-danger mt-4">{{ errorMessage }}</div>  
+    
+    <form (ngSubmit)="updateinventory()" *ngIf="inventory" >  
+      <div class="mb-3">  
+        <label for="name" class="form-label">Name</label>  
+        <input id="name" [(ngModel)]="inventory.product.name" class="form-control" required  [ngModelOptions]="{standalone: true}" disabled/>  
+      </div>  
+      <div class="mb-3">  
+        <label for="description" class="form-label">Description</label>  
+        <input id="description" [(ngModel)]="inventory.product.description" name="description" class="form-control" [ngModelOptions]="{standalone: true}"  disabled/>  
+      </div>  
+      <div class="mb-3">  
+        <label for="price" class="form-label">Price</label>  
+        <input type="number" id="price" [(ngModel)]="inventory.product.price" name="price" class="form-control" required [ngModelOptions]="{standalone: true}"  disabled/>  
+      </div>
+      
+      <div class="mb-3">  
+        <label for="price" class="form-label">Stock</label>  
+        <input type="number" id="stock" [(ngModel)]="inventory.stock" name="stock" class="form-control" required [ngModelOptions]="{standalone: true}"/>  
+      </div>  
+
+      <div class="mb-3">  
+        <label for="price" class="form-label">Location</label>  
+        <input type="text" id="price" [(ngModel)]="inventory.warehouse.location" name="price" class="form-control" required [ngModelOptions]="{standalone: true}"  disabled/>  
+      </div>  
+     
+      <button type="submit" class="btn btn-primary">Update Stock</button>  
+    </form>  
+</div>
+   

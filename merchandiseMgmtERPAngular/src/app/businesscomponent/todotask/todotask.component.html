@@ -1,0 +1,34 @@
+
+<div class="col-md-12 col-xl-4 grid-margin stretch-card">
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h4 class="card-title">To do list</h4>
+
+           
+            <div class="add-items d-flex">
+                <input type="text" class="form-control todo-list-input bg-dark text-white" placeholder="enter task.." [(ngModel)]="newTask">
+                <button class="add btn btn-primary todo-list-add-btn text-white" (click)="addTask()">Add</button>
+            </div>
+
+           
+            <div class="list-wrapper">
+                <ul class="d-flex flex-column-reverse text-white todo-list todo-list-custom">
+                    
+                    <li *ngFor="let task of tasks" [ngClass]="{'completed': task.status === 'COMPLETED'}" class="d-flex justify-content-between align-items-center">
+                        
+                        <div class="form-check form-check-primary">
+                            <label class="form-check-label">
+                                <input class="checkbox" type="checkbox" (change)="markAsCompleted(task.id, $event)" [checked]="task.status === 'COMPLETED'">
+                                {{ task.description }}
+                            </label>
+                        </div>
+                       
+                        <i class="remove mdi mdi-close-box" (click)="deleteTask(task.id)" style="cursor: pointer;"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+

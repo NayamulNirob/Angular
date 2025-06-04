@@ -1,0 +1,8 @@
+.search-bar-light {
+    border: 2px solid #f8f9fa;  /* Light border color */
+}
+
+.search-bar-light:focus {
+    outline: white;  /* Remove default outline */
+    box-shadow: 0 0 5px #f8f9fa;  /* Light glow effect on focus */
+}

@@ -1,0 +1,136 @@
+<div class="col-12 grid-margin stretch-card">
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h4 class="card-title">Update Supplier Details</h4>
+            <p class="card-description"> Update if any Correcton needed </p>
+            <div *ngIf="errorMessage" class="alert alert-danger mt-4">{{ errorMessage }}</div>
+
+
+
+            <form (ngSubmit)="updateSupplier()">
+                <div class="form-group mb-3 ">
+                    <label for="name">Supplier Name</label>
+                    <input type="text" id="name" [(ngModel)]="supplier.name" name="name"
+                        class="form-control bg-dark text-white" placeholder="Enter supplier name" required />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" [(ngModel)]="supplier.email" name="email"
+                        class="form-control bg-dark text-white" placeholder="Enter supplier email" required />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" [(ngModel)]="supplier.phone" name="phone"
+                        class="form-control bg-dark text-white" placeholder="Enter supplier phone" required />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="address">Address</label>
+                    <textarea id="address" [(ngModel)]="supplier.address" name="address"
+                        class="form-control bg-dark text-white" rows="3" placeholder="Enter supplier address"
+                        required></textarea>
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="updatedAt">Update At</label>
+                    <input type="datetime-local" id="updatedAt" [(ngModel)]="supplier.updatedAt" name="updatedAt"
+                        class="form-control bg-dark text-white" placeholder="Enter Current Time" required disabled />
+                </div>
+
+
+
+
+                <!-- <div class="form-group mb-3">
+                            <label for="status">Status</label>
+                            <select id="status" [(ngModel)]="supplier.status" name="status"
+                                class="form-control bg-dark text-white">
+                                <option value="" selected disabled>--Select Status--</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                        </div> -->
+
+
+                <!-- <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Country</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="suppliers" [(ngModel)]="supplier.country.id"
+                                    name="supplier" required>
+                                    <option *ngFor="let countries of  countries" [value]="countries.id">{{
+                                        countries.name}}</option>
+                                </select>
+                            </div>
+                        </div> -->
+<!-- 
+
+                <div class="form-group mb-3">
+                    <div class="form-group row bg-dark text-white">
+                        <label class="col-sm-3 col-form-label">Membership Status</label>
+                        <div class="col-sm-3">
+                            <div class="form-check bg-dark text-white">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="status" id="status"
+                                        value="Germents" checked [(ngModel)]="supplier.status"> Germents
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="status" id="status"
+                                        value="Row Metaril&chemical" checked [(ngModel)]="supplier.status">Row
+                                    Metaril</label>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="status" id="status"
+                                        value="Accessories" checked [(ngModel)]="supplier.status"> Accessories
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> -->
+                <div class="form-group mb-3">
+                    <div class="form-group row bg-dark text-white">
+                        <label class="col-sm-3 col-form-label">Membership Status</label>
+                        <div class="col-sm-3">
+                            <div class="form-check bg-dark text-white">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="status" id="status-garments"
+                                        value="Germents" [(ngModel)]="supplier.status" checked> Germents
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="status" id="status-raw-material"
+                                        value="Row Metaril&chemical" [(ngModel)]="supplier.status"> Row Metaril
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="status" id="status-accessories"
+                                        value="Accessories" [(ngModel)]="supplier.status"> Accessories
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+                <button type="submit" class="btn btn-success btn-block">Update Supplier</button>
+            </form>
+        </div>
+        <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+            {{ errorMessage }}
+        </div>
+    </div>
+</div>

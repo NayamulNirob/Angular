@@ -1,0 +1,119 @@
+<div class="row">
+   
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card bg-dark text-white border rounded">
+            <div class="card-body">
+                <h4 class="card-title">Import Category</h4>
+
+                <form class="forms-sample" (ngSubmit)="addProductCategories()">
+
+                    <div class="form-group">
+                        <label for="name">Category Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Category Name"
+                            [(ngModel)]="newCategory.name" name="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" rows="2" [(ngModel)]="newCategory.description"
+                            name="description"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categoryCode">Category Code</label>
+                        <input type="text" class="form-control" id="categoryCode" placeholder="Category Code"
+                            [(ngModel)]="newCategory.categoryCode" name="categoryCode" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categoryCode">Attachment</label>
+                        <input type="file" class="form-control" id="formFileMultiple" (change)="onFileSelected($event)"
+                            accept="image/*" required>
+
+
+                    </div>
+                    <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        <button class="btn btn-dark">Cancel</button>
+                    </ng-container>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card bg-dark text-white border rounded">
+            <div class="card-body">
+                <h4 class="card-title">Category List</h4>
+
+                <div class="table-responsive  ">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th>Cat Icon</th>
+                                <th> Category Name</th>
+                                <th> Description</th>
+                                <th> Code </th>
+                                <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+                                    <th> Action</th>
+                                </ng-container>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            <tr *ngFor="let cat of categories">
+                                <td class="user-photo">
+                                    <img [src]="cat.image ? 'http://localhost:8089/images/' + cat.image : 'static/images/**'"
+                                        alt="Profile Photo" class="img-thumbnail" />
+                                </td>
+                                <td>{{ cat.name }}</td>
+                                <td>{{ cat.description }}</td>
+                                <td>{{ cat.categoryCode}}</td>
+                                <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+                                    <td>
+
+
+                                        <a class="btn text-white" data-toggle="modal" data-target="#exampleModal"
+                                            onclick="editProductCategory(cat.id)">
+                                            <i class="fa-solid fa-pen-to-square fa-fade" style="color: #66fc72;"></i>
+                                        </a>
+
+                                        <a class="btn" data-toggle="modal" data-target="#exampleModal"><i
+                                                class="fa-solid fa-trash-can fa-fade" style="color: #fd0101;"></i>
+
+
+                                        </a>
+
+                                    </td>
+                                </ng-container>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row justify-content-center ms-1">
+
+    <div class="card md-4 m-3 ms-3 " style="width: 18rem;" *ngFor="let u of categories">
+
+        <div class="card-body ">
+            <img src="http://localhost:8089/images/{{u.image}}" class="card-img-top" alt="{{u.name}}">
+            <h5 class="card-title text-dark text-center mt-2">{{u.name}}</h5>
+            <p class="card-text">Code : {{u.categoryCode}}<br>
+                Description : {{u.description}}<br>
+            </p>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+

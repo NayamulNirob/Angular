@@ -1,0 +1,278 @@
+<!-- partial:partials/_sidebar.html -->
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-start justify-content-start fixed-top mt-2">
+        <a class="sidebar-brand brand-logo-mini mt-2" href="/dashbord"><img src="../../assets/images/logo-mini.svg"
+                alt="logo" loading="lazy"
+                style="width: 80px; height: auto; position: relative; margin-right: auto;" /></a>
+    </div>
+    <ul class="nav">
+        <li class="nav-item profile">
+            <div class="profile-desc">
+                <div class="profile-pic" *ngIf="user">
+                    <div class="count-indicator">
+                        <img class="img-xs rounded-circle " src="http://localhost:8089/images/{{user.image}}"
+                            alt="{{user.name}}" loading="lazy">
+                        <span class="count bg-success"></span>
+                    </div>
+                    <div class="profile-name">
+                        <p class="mb-0 font-weight-normal">{{user.name}}</p>
+                        <span>Gold Member</span>
+                    </div>
+
+                    <div *ngIf="!user">
+                        <p>Loading user profile...</p>
+                    </div>
+
+                </div>
+
+                <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+                <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list"
+                    aria-labelledby="profile-dropdown">
+                    <a href="/userProfile" class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <div class="preview-icon bg-dark rounded-circle">
+                                <i class="mdi mdi-settings text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="preview-item-content">
+                            <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="/transaction" class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <div class="preview-icon bg-dark rounded-circle">
+                                <i class="mdi mdi-onepassword  text-info"></i>
+                            </div>
+                        </div>
+                        <div class="preview-item-content">
+                            <p class="preview-subject ellipsis mb-1 text-small">Transacton History</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="/task" class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <div class="preview-icon bg-dark rounded-circle">
+                                <i class="mdi mdi-calendar-today text-success"></i>
+                            </div>
+                        </div>
+                        <div class="preview-item-content">
+                            <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item nav-category">
+            <span class="nav-link">Navigation</span>
+        </li>
+        <li class="nav-item menu-items">
+            <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+                <a class="nav-link" href="/dashbord">
+                    <span class="menu-icon">
+                        <i class="mdi mdi-speedometer"></i>
+                    </span>
+                    <span class="menu-title">Dashboard</span>
+                </a>
+            </ng-container>
+        </li>
+
+        <li class="nav-item menu-items">
+            <ng-container *ngIf="authService.getUserRole() === 'USER'">
+                <a class="nav-link" href="/userdashboard">
+                    <span class="menu-icon">
+                        <i class="mdi mdi-speedometer"></i>
+                    </span>
+                    <span class="menu-title">Dashboard</span>
+                </a>
+            </ng-container>
+        </li>
+
+        <li class="nav-item menu-items">
+            <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+                <a class="nav-link" href="/product">
+                    <span class="menu-icon">
+                        <i class="fa-sharp-duotone fa-solid fa-list fa-fade"
+                            style="--fa-primary-color: #57e3ff; --fa-secondary-color: #3a82fd;"></i>
+                    </span>
+                    <span class="menu-title">Purchase Product</span>
+                </a>
+            </ng-container>
+        </li>
+
+
+
+
+
+
+        <li class="nav-item menu-items">
+
+            <a class="nav-link" href="/inventory">
+                <span class="menu-icon">
+                    <i class="fa-solid fa-scroll fa-flip" style="--fa-flip-x: 1; --fa-flip-y: 0;"></i>
+                </span>
+                <span class="menu-title">Inventory Mgmt</span>
+            </a>
+
+        </li>
+
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-icon">
+                    <i class="fa-solid fa-list-check fa-fade" style="color: #8258ff;"></i>
+
+                </span>
+                <span class="menu-title">Category Based</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+
+                    <li class="nav-item"> <a class="nav-link" href="/category">
+                            <i class="fa-solid fa-check-double fa-beat" style="color: #ffffff;"></i>&nbsp; Product
+                            Category</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="/subcategory">
+                            <i class="fa-solid fa-check-double fa-beat" style="color: #ffffff;"></i>&nbsp;Sub
+                            Category</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </li>
+
+
+        <li class="nav-item menu-items">
+            <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+                <a class="nav-link" href="/stock">
+                    <span class="menu-icon">
+                        <i class="fa-regular fa-clone fa-beat" style="color: #005eff;"></i>
+                    </span>
+                    <span class="menu-title">Stock Management</span>
+                </a>
+            </ng-container>
+        </li>
+
+        <li class="nav-item menu-items">
+            <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+
+                <a class="nav-link" href="/orders">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-layer-group fa-beat-fade" style="color: #63E6BE;"></i>
+                    </span>
+                    <span class="menu-title">Order Mgmt</span>
+                </a>
+            </ng-container>
+        </li>
+        <li class="nav-item menu-items">
+            <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+                <a class="nav-link" href="/sales">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-chart-simple fa-beat" style="color: #ff2e2e;"></i>
+
+                    </span>
+                    <span class="menu-title">Sales</span>
+
+                </a>
+            </ng-container>
+        </li>
+
+
+        <li class="nav-item menu-items">
+            <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+                <a class="nav-link" href="/transaction">
+                    <span class="menu-icon">
+                        <i class="fa-duotone fa-solid fa-money-check-dollar fa-beat-fade fa-2xl"
+                            style="--fa-primary-color: #f5ed00; --fa-secondary-color: #49f500;"></i>
+
+                    </span>
+                    <span class="menu-title">Transaction List</span>
+
+                </a>
+            </ng-container>
+        </li>
+
+
+
+        <li class="nav-item menu-items">
+            <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+                <a class="nav-link" href="/customer">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-wind fa-beat" style="color: #74C0FC;"></i>
+                    </span>
+                    <span class="menu-title">Buyers</span>
+                </a>
+            </ng-container>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span class="menu-icon">
+                    <i class="fa-sharp fa-solid fa-globe fa-fade fa-lg" style="color: #36cf22;"></i>
+                </span>
+                <span class="menu-title">Location</span>
+                <i class="menu-arrow"></i>
+
+            </a>
+            <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/warehouseview">
+                            <i class="fa-solid fa-check-double fa-beat" style="color: #ffffff;"></i>&nbsp; ALL
+                            Warehouses </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="/country">
+                            <i class="fa-solid fa-check-double fa-beat" style="color: #ffffff;"></i>&nbsp;Country
+                            List</a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
+
+
+        <li class="nav-item menu-items">
+            <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+                <a class="nav-link" href="/supplier">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-industry fa-beat-fade" style="color: #B197FC;"></i>
+                    </span>
+                    <span class="menu-title">Supplier</span>
+                </a>
+            </ng-container>
+        </li>
+
+
+        <li class="nav-item menu-items">
+            <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+                <a class="nav-link" href="/task">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-circle-check fa-bounce" style="color: #00e1ff;"></i>
+                    </span>
+                    <span class="menu-title">To-Do List</span>
+                </a>
+            </ng-container>
+        </li>
+
+
+
+
+
+
+
+        <li class="nav-item menu-items">
+            <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+
+                <a class="nav-link" href="/reports">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-server fa-beat" style="color: #005eff;"></i>
+                    </span>
+                    <span class="menu-title">Reports & Analytics</span>
+
+                </a>
+            </ng-container>
+        </li>
+
+    </ul>
+</nav>

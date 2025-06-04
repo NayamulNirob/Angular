@@ -1,0 +1,139 @@
+<div class="container-fluid mt-4">
+
+  <div class="card bg-dark text-white shadow-lg mb-4">
+    <div class="card-body">
+      <h2 class="text-center">Reports & Analytics</h2>
+    </div>
+  </div>
+
+
+  <div class="card bg-dark text-white shadow-lg mb-4">
+    <div class="card-body  justify-content-center ">
+
+      <div id="print-section">
+
+        <h3 class="text-center">Stocks Report</h3>
+        <div class="table-responsive">
+          <table class="table table-dark table-striped mt-4 mat-elevation-z8">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Product Name</th>
+                <th>Warehouse</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Date Added</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let stock of stock; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ stock.product.name }}</td>
+                <td>{{ stock.wareHouse.name }}</td>
+                <td>{{ stock.product.price | currency }}</td>
+                <td>{{ stock.product.quantity }}</td>
+                <td>{{ stock.product.totalPrice| currency }}</td>
+                <td>{{ stock.createdAt| date: 'd MMM, y'}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </div>
+      <button type="button" class="btn btn-outline-info btn-icon-text btn-sm mt-2" (click)="generatePDF()"> Print <i
+          class="mdi mdi-printer btn-icon-append"></i></button>
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class="card bg-dark text-white shadow-lg mb-4">
+    <div class="card-body ">
+      <div id="print-sections">
+        <h3 class="text-center">Sales Report</h3>
+
+
+        <div class="bar-chart mt-4 mb-5 flex-row">
+          <h4 class="text-center text-dark">Sales Revenue</h4>
+          <div class="d-flex ">
+            <div *ngFor="let data of salesRevenueChartData.data; let i = index" class="bar bg-info"
+              [style.height]="(data / maxRevenue * 60) + '%'">
+              <div class="bar-label text-white">
+                {{ salesRevenueChartData.labels[i] }}
+                {{ data | currency:'USD':'symbol':'1.0-2' }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-responsive row">
+
+          <table class="table table-dark table-striped mt-5 mat-elevation-z8">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Total Amount</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let sale of sales">
+                <td>{{ sale.id }}</td>
+                <td>{{ sale.product.name }}</td>
+                <td>{{ sale.totalPrice | currency }}</td>
+                <td>{{ sale.saleDate | date: 'd MMM, y' }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- <button (click)="generatesalePDF()">Generate PDF</button> -->
+      <button type="button" class="btn btn-outline-primary btn-icon-text btn-sm mt-2" (click)="generatePDF()"> Print <i
+          class="mdi mdi-printer btn-icon-append"></i></button>
+    </div>
+  </div>
+
+
+  <div class="card bg-dark text-white shadow-lg">
+    <div class="card-body">
+      <div id="print-sectionss">
+        <h3 class="text-center">Supplier Report</h3>
+        <div class="table-responsive">
+
+          <table class="table table-dark table-striped mt-4 mat-elevation-z8">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Contact Person</th>
+                <th>Created Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let supplier of suppliers">
+                <td>{{ supplier.id }}</td>
+                <td>{{ supplier.name }}</td>
+                <td>{{ supplier.contactPerson }}</td>
+                <td>{{ supplier.createdAt | date }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- <button printSectionId="print-section" ngxPrint>print</button> -->
+      <button type="button" class="btn btn-outline-success btn-icon-text btn-sm mt-2" (click)="generatePDF()"> Print <i
+          class="mdi mdi-printer btn-icon-append"></i></button>
+    </div>
+
+
+  </div>
+
+</div>
+<!-- </div> -->
+<!-- <button printSectionId="print-section" ngxPrint>print</button> -->

@@ -1,0 +1,281 @@
+{
+  "product": [
+    {
+      "id": "5772",
+      "name": "Pant",
+      "description": "Normal",
+      "price": 800,
+      "quantity": 500
+    },
+    {
+      "id": "b4de",
+      "name": "Shirt",
+      "description": "Description for Product Shirt",
+      "price": 500,
+      "quantity": 150
+    },
+    {
+      "id": "ad44",
+      "name": "Product A",
+      "description": "Description for Product A",
+      "price": 30,
+      "quantity": 25
+    },
+    {
+      "id": "593d",
+      "name": "Product N",
+      "description": "Description for Product N",
+      "price": 200,
+      "quantity": 15
+    },
+    {
+      "id": "519c",
+      "name": "Nirjash",
+      "description": "Description for Product A",
+      "price": 50,
+      "quantity": 100
+    }
+  ],
+  "inventory": [
+    {
+      "id": "1",
+      "name": "Item A",
+      "stock": 10,
+      "location": "Warehouse 1",
+      "description": "Description of Item A",
+      "price": 20
+    },
+    {
+      "id": "2",
+      "name": "Item B",
+      "stock": 5,
+      "location": "Warehouse 2",
+      "description": "Description of Item B",
+      "price": 15
+    },
+    {
+      "id": "3",
+      "name": "Product C",
+      "stock": 100,
+      "location": "Shelf 1",
+      "description": "High-quality product A",
+      "price": 20
+    },
+    {
+      "id": "4",
+      "name": "Product D",
+      "stock": 50,
+      "location": "Shelf 2",
+      "description": "Popular product B",
+      "price": 15
+    }
+  ],
+  "orders": [
+    {
+      "id": "3f0b",
+      "customerName": "Raju",
+      "product": "Item D",
+      "quantity": 80,
+      "status": "Pending",
+      "orderDate": "2024-09-01T10:51:56.144Z",
+      "totalPrice": 1600
+    },
+    {
+      "id": "8127",
+      "customerName": "Nirob",
+      "product": "Item C",
+      "quantity": 125,
+      "status": "Pending",
+      "orderDate": "2024-09-01T12:47:56.071Z",
+      "totalPrice": 2500
+    },
+    {
+      "id": "ba01",
+      "customerName": "Nafiz Shahariar",
+      "product": "Item E",
+      "quantity": 21,
+      "status": "Pending",
+      "orderDate": "2024-09-01T12:48:36.799Z",
+      "totalPrice": 420
+    }
+  ],
+  "Supplier": [
+    {
+      "id": "1",
+      "name": "NAYAMUL ISLAM",
+      "contactPerson": "NAYAMUL ISLAM",
+      "email": "nayamulislam@gmail.com",
+      "phone": "01323276407",
+      "address": "7th floor, House 5/C, Road:1, PC Culture Housing Society limited,",
+      "createdAt": "2024-09-03T08:55:29.240Z",
+      "updatedAt": "2024-09-03T08:55:29.240Z"
+    },
+    {
+      "id": "2",
+      "name": "MD Neyamul Isalm Nirob",
+      "contactPerson": "MD Neyamul Isalm Nirob",
+      "email": "1302neyamulislamnirob@gmail.com",
+      "phone": "01323276407",
+      "address": "7th Floor, House 5/C, Road 01,",
+      "createdAt": "2024-09-03T08:56:49.247Z",
+      "updatedAt": "2024-09-03T08:56:49.247Z"
+    },
+    {
+      "id": "4",
+      "name": "NAYAMUL ISLAM",
+      "contactPerson": "NAYAMUL ISLAM",
+      "email": "nayamulislam@gmail.com",
+      "phone": "01323276407",
+      "address": "7th floor, House 5/C, Road:1, PC Culture Housing Society limited,",
+      "createdAt": "2024-09-03T08:56:57.566Z",
+      "updatedAt": "2024-09-03T08:56:57.566Z"
+    }
+  ],
+  "sales": [
+    {
+      "id": "1",
+      "productName": "Product A",
+      "quantity": 2,
+      "price": 20,
+      "totalAmount": 40,
+      "customerName": "John Doe",
+      "saleDate": "2023-10-01T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "productName": "Product B",
+      "quantity": 1,
+      "price": 15,
+      "totalAmount": 15,
+      "customerName": "Jane Smith",
+      "saleDate": "2023-10-02T11:00:00Z"
+    },
+    {
+      "id": "3",
+      "productName": "Product C",
+      "quantity": 2,
+      "price": 20,
+      "totalAmount": 40,
+      "customerName": "John Doe",
+      "saleDate": "2023-10-01T10:00:00Z"
+    },
+    {
+      "id": "4",
+      "productName": "Product D",
+      "quantity": 1,
+      "price": 15,
+      "totalAmount": 15,
+      "customerName": "Jane Smith",
+      "saleDate": "2023-10-02T11:00:00Z"
+    }
+  ],
+  "customer": [
+    {
+      "id": "1",
+      "name": "Alice Johnson",
+      "email": "alice@example.com",
+      "phone": "+123456789",
+      "address": "123 Elm Street",
+      "createdAt": "2023-10-01T10:00:00Z",
+      "updatedAt": "2023-10-01T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "name": "Bob Smith",
+      "email": "bob@example.com",
+      "phone": "+987654321",
+      "address": "456 Oak Avenue",
+      "createdAt": "2023-10-02T11:00:00Z",
+      "updatedAt": "2023-10-02T11:00:00Z"
+    }
+  ],
+  "user": [
+    {
+      "id": "0410",
+      "name": "Neyamul",
+      "email": "nayamulislam@gmail.com",
+      "password": "123456",
+      "image": "",
+      "role": "Admin"
+    },
+    {
+      "id": "4210",
+      "name": "Nirjash",
+      "email": "nirjash@gmail.com",
+      "password": "123456",
+      "image": "",
+      "role": "user"
+    },
+    {
+      "id": "c948",
+      "name": "Shawon",
+      "email": "showon@gmail.com",
+      "password": "123456789",
+      "image": "",
+      "role": "user"
+    },
+    {
+      "id": "c03a",
+      "name": "Neyamul Nirob",
+      "email": "1302neyamulislamnirob@gmail.com",
+      "password": "1234",
+      "image": ""
+    }
+  ],
+  "warehouses": [
+    {
+      "id": "1",
+      "name": "Warehouse A",
+      "location": "City A",
+      "capacity": 1000,
+      "inventory": []
+    },
+    {
+      "id": "2",
+      "name": "Warehouse B",
+      "location": "City B",
+      "capacity": 2000,
+      "inventory": []
+    }
+  ],
+  "stores": [
+    {
+      "id": "1",
+      "name": "Store A",
+      "location": "City C",
+      "inventory": []
+    },
+    {
+      "id": "2",
+      "name": "Store B",
+      "location": "City D",
+      "inventory": []
+    }
+  ],
+  "inventoryItems": [
+    {
+      "id": "1",
+      "productId": 1,
+      "warehouseId": 1,
+      "quantity": 50
+    },
+    {
+      "id": "2",
+      "productId": 2,
+      "warehouseId": 1,
+      "quantity": 30
+    },
+    {
+      "id": "3",
+      "productId": 1,
+      "storeId": 1,
+      "quantity": 20
+    },
+    {
+      "id": "4",
+      "productId": 2,
+      "storeId": 2,
+      "quantity": 10
+    }
+  ]
+}

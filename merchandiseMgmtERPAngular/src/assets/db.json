@@ -1,0 +1,207 @@
+{
+    "product": [
+      {
+        "id": "1",
+        "name": "Product A",
+        "description": "Description for Product A",
+        "price": 25.5,
+        "quantity": 100
+      },
+      {
+        "id": "2",
+        "name": "Product B",
+        "description": "Description for Product B",
+        "price": 15.75,
+        "quantity": 200
+      },
+      {
+        "id": "3",
+        "name": "Product C",
+        "description": "Description for Product C",
+        "price": 30,
+        "quantity": 50
+      },
+      {
+        "id": "4",
+        "name": "Product D",
+        "description": "Description for Product D",
+        "price": 12,
+        "quantity": 150
+      },
+      {
+        "id": "5",
+        "name": "Product E",
+        "description": "Description for Product E",
+        "price": 45.99,
+        "quantity": 75
+      },
+      {
+        "id": "6",
+        "name": "T-shart",
+        "description": "cloth",
+        "price": 900,
+        "quantity": 10
+      }
+    ],
+    "inventory": [
+      {
+        "id": "1",
+        "name": "Item A",
+        "stock": 10,
+        "location": "Warehouse 1",
+        "description": "Description of Item A",
+        "price": 20
+      },
+      {
+        "id": "2",
+        "name": "Item B",
+        "stock": 5,
+        "location": "Warehouse 2",
+        "description": "Description of Item B",
+        "price": 15
+      },
+      {
+        "id": "3",
+        "name": "Product C",
+        "stock": 100,
+        "location": "Shelf 1",
+        "description": "High-quality product A",
+        "price": 20
+      },
+      {
+        "id": "4",
+        "name": "Product D",
+        "stock": 50,
+        "location": "Shelf 2",
+        "description": "Popular product B",
+        "price": 15
+      }
+    ],
+    "orders": [
+      {
+        "id": "1",
+        "customerName": "John Doe",
+        "product": "Item A",
+        "quantity": 2,
+        "status": "Processing",
+        "orderDate": "2023-10-01T10:00:00Z",
+        "totalPrice": 40
+      },
+      {
+        "id": "2",
+        "customerName": "Jane Smith",
+        "product": "Item B",
+        "quantity": 1,
+        "status": "Shipped",
+        "orderDate": "2023-10-02T11:00:00Z",
+        "totalPrice": 15
+      }
+    ],
+    "Supplier": [
+      {
+        "id": "1",
+        "name": "Supplier A",
+        "contactPerson": "Alice Johnson",
+        "email": "alice@supplierA.com",
+        "phone": "+123456789",
+        "address": "123 Supplier St, Supplier City",
+        "createdAt": "2023-10-01T10:00:00Z",
+        "updatedAt": "2023-10-01T10:00:00Z"
+      },
+      {
+        "id": "2",
+        "name": "Supplier B",
+        "contactPerson": "Bob Smith",
+        "email": "bob@supplierB.com",
+        "phone": "+987654321",
+        "address": "456 Supplier Ave, Supplier City",
+        "createdAt": "2023-10-02T11:00:00Z",
+        "updatedAt": "2023-10-02T11:00:00Z"
+      },
+      {
+        "id": "3",
+        "name": "Supplier C",
+        "contactPerson": "Alice",
+        "email": "alice@supplier.com",
+        "phone": "+123456789",
+        "address": "123 Supplier St.",
+        "createdAt": "2023-10-01T10:00:00Z",
+        "updatedAt": "2023-10-01T10:00:00Z"
+      },
+      {
+        "id": "4",
+        "name": "Supplier D",
+        "contactPerson": "Bob",
+        "email": "bob@supplier.com",
+        "phone": "+987654321",
+        "address": "456 Supplier Ave.",
+        "createdAt": "2023-10-02T11:00:00Z",
+        "updatedAt": "2023-10-02T11:00:00Z"
+      }
+    ],
+    "sales": [
+      {
+        "id": "1",
+        "productName": "Product A",
+        "quantity": 2,
+        "price": 20,
+        "totalAmount": 40,
+        "customerName": "John Doe",
+        "saleDate": "2023-10-01T10:00:00Z"
+      },
+      {
+        "id": "2",
+        "productName": "Product B",
+        "quantity": 1,
+        "price": 15,
+        "totalAmount": 15,
+        "customerName": "Jane Smith",
+        "saleDate": "2023-10-02T11:00:00Z"
+      },
+      {
+        "id": "3",
+        "productName": "Product C",
+        "quantity": 2,
+        "price": 20,
+        "totalAmount": 40,
+        "customerName": "John Doe",
+        "saleDate": "2023-10-01T10:00:00Z"
+      },
+      {
+        "id": "4",
+        "productName": "Product D",
+        "quantity": 1,
+        "price": 15,
+        "totalAmount": 15,
+        "customerName": "Jane Smith",
+        "saleDate": "2023-10-02T11:00:00Z"
+      }
+    ],
+    "customer": [
+      {
+        "id": "1",
+        "name": "Alice Johnson",
+        "email": "alice@example.com",
+        "phone": "+123456789",
+        "address": "123 Elm Street",
+        "createdAt": "2023-10-01T10:00:00Z",
+        "updatedAt": "2023-10-01T10:00:00Z"
+      },
+      {
+        "id": "2",
+        "name": "Bob Smith",
+        "email": "bob@example.com",
+        "phone": "+987654321",
+        "address": "456 Oak Avenue",
+        "createdAt": "2023-10-02T11:00:00Z",
+        "updatedAt": "2023-10-02T11:00:00Z"
+      }
+    ],
+    "user": {
+      "username": "john_doe",
+      "email": "john.doe@example.com",
+      "password": "SecurePassword123!",
+      "confirmPassword": "SecurePassword123!",
+      "rememberMe": true
+    }
+  }

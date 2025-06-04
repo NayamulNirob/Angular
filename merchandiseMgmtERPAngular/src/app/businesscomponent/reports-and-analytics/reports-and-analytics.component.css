@@ -1,0 +1,137 @@
+/* 
+  .form-control {
+    background-color: #343a40;
+    color: #fff;
+    border: 1px solid #495057;
+}
+.form-control:focus {
+    background-color: #495057;
+    color: #fff;
+}
+table {
+    width: 100%;
+}
+th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+.table {
+    margin-bottom: 0;
+}
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card-body {
+    padding: 2rem;
+}
+.bar-chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 200px;
+}
+.bar {
+    width: 40px;
+    margin: 0 10px;
+    background-color: #17a2b8;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.bar:hover {
+    background-color: #138496;
+}
+.bar-label {
+    position: absolute;
+    bottom: -20px;
+    text-align: center;
+    width: 100%;
+}
+
+.bar-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .bar {
+      width: 40px;
+      border-radius: 5px 5px 0 0;
+  }
+
+  .bar-label {
+      font-size: 14px;
+      color: #ffffff;
+      margin-top: 5px; 
+  }
+
+  .bar-chart {
+      width: 100%;
+  }
+
+  .d-flex {
+      gap:20px;
+  } */
+
+
+  .bar-chart {  
+    margin: 0 auto; /* Center the chart */  
+    width: 100%; /* Ensure full-width for responsiveness */  
+    max-width: 600px; /* Set a max width for larger screens */  
+}  
+
+.bar {  
+    flex-grow: 1; /* Allow the bars to grow */  
+    min-width: 30px; /* Minimum width for smaller screens */  
+    max-width: 50px; /* Maximum width for large screens */  
+    margin: 0 5px; /* Margin between bars */  
+    background-color: #17a2b8;  
+    display: flex;  
+    align-items: flex-end;  
+    justify-content: center;  
+    transition: all 0.3s ease;  
+}  
+
+.bar:hover {  
+    background-color: #138496;  
+}  
+
+.bar-label {  
+    position: relative; /* Change to relative */  
+    bottom: -20px; /* Adjust to ensure it's visible without overflow */  
+    text-align: center;  
+    color: #ffffff;  
+}  
+
+.d-flex {  
+    display: flex;  
+    justify-content: space-around; /* Adjust spacing between bars */  
+    align-items: flex-end; /* Align bars to the bottom */  
+    height: 200px; /* Fixed height for the chart */  
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */  
+    margin: 20px 0;
+    gap: 17px;
+}  
+
+/* Media Queries */  
+@media (max-width: 768px) {  
+    .bar {  
+        margin: 0 2px; /* Reduced margin */  
+    }
+    .bar-chart {  
+        display: none;  
+      }   
+}  
+
+@media (max-width: 576px) {  
+    .bar {  
+        min-width: 25px; /* Reduced min-width for very small screens */  
+    }  
+    .bar-chart {  
+        display: none;  
+      }  
+} 
+

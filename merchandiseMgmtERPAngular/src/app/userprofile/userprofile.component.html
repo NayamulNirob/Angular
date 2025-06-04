@@ -1,0 +1,31 @@
+<div class="container" style="background-color: #343a40; min-height: 100vh; padding: 20px;">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card mb-4"
+                style="border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); background-color: #495057 ;"
+                *ngIf="user">
+                <div class="card-header text-white"
+                    style="background-color: #007bff; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                    <h2 class="text-center">User Profile</h2>
+                </div>
+                <div class="card-body text-center">
+                    <img src="http://localhost:8089/images/{{user.image}}" class="card-img-top" alt="{{user.name}}"
+                        style="height: 200px; width: auto; max-width: 100%; border-radius: 15px;">
+                    <h5 class="card-title text-light mt-3">{{user.name}}</h5>
+                    <p class="card-text text-white">
+                        <strong>Email : </strong> {{user.email}}<br>
+                        <strong>Cell : </strong> {{user.cell}}<br>
+                        <strong>Gender : </strong>{{user.gender}}<br>
+                        <strong>Date Of Birth : </strong> {{user.dob}}<br>
+                        <strong>Address : </strong> {{user.address}}<br>
+                        <strong>Role : </strong> {{user.role}}<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!user" class="text-center mt-5">
+        <p class="text-white" style="font-size: 18px;">Loading user profile...</p>
+    </div>
+</div>

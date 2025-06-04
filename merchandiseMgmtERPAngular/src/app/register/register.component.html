@@ -1,0 +1,155 @@
+
+<div class="container-scroller">
+  <div class="container-fluid page-body-wrapper full-page-wrapper">
+    <div class="row w-100 m-0 ">
+      <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg ">
+        <div class="card col-lg-8 mx-auto  bg-dark text-white">
+          <div class="card-body px-6 py-4 ">
+            <h2 class="text-center"> Registration Form </h2>
+
+            <form [formGroup]="regFrom" (ngSubmit)="onSubmit()">
+              <p class="card-description"> Personal info </p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Full Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control p_input" formControlName="name" required
+                        placeholder="Full Name " />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Email</label>
+                    <div class="col-sm-9">
+                      <input type="email" class="form-control p_input" formControlName="email" required
+                        placeholder="xyx@mail.com">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Date of Birth</label>
+                    <div class="col-sm-9">
+                      <input type="date" class="form-control p_input" formControlName="dob" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Password</label>
+                    <div class="col-sm-9">
+                      <input type="password" class="form-control p_input" formControlName="password"
+                        placeholder="***************">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Address</label>
+                    <div class="col-sm-9">
+                      <textarea class="form-control p_input" rows="2" formControlName="address"
+                        placeholder="Full Address"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group row ">
+                      <label class="col-sm-3 col-form-label mt-2">Gender</label>
+                      <div class="col-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="gender"  value="Male"
+                              formControlName="gender"> Male
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="gender"  value="Female"
+                              formControlName="gender"> Female
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="col-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="gender" value="Other"
+                              formControlName="gender"> Others
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Image </label>
+                      <div class="col-sm-9 ">
+                        <input type="file" class="form-control" id="formFileMultiple" (change)="onFileSelected($event)"
+                          accept="image/*" required />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Cell</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control p_input" formControlName="cell"
+                          placeholder="+88000000000" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="row justify-content-center mt-3">
+                  <div class="text-center col-4 d-flex align-items-center">
+                    <button type="submit" class="btn btn-primary btn-block enter-btn"
+                      (click)="regFrom">Register</button>
+                  </div>
+                </div>
+
+                <div class="row justify-content-center ">
+                  <div class="d-flex justify-content-around col-8">
+                    <button class="btn btn-outline-primary mx-1 col-5">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path
+                          d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                      </svg> &nbsp; <a onclick="loginWithFacebook()"> Facebook</a>
+                    </button>
+                    <button class="btn btn-outline-danger mx-1 col-5" type="button">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-google" viewBox="0 0 16 16">
+                        <path 
+                          d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z" />
+                      </svg>&nbsp; <a onclick="loginWithGoogle()"> Google </a>
+                    </button>
+                  </div>
+                </div>
+
+                <p class="sign-up text-center">Already have an Account?<a href="/login"> Sign In</a></p>
+                <p class="terms">By creating an account you are accepting our<a href="#"> Terms & Conditions</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

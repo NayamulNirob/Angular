@@ -1,0 +1,472 @@
+<div class="content-wrapper p-1 my-6">
+
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card ">
+            <div class="card corona-gradient-card">
+                <div class="card-body py-0 px-0 px-sm-3 ">
+                    <div class="row align-items-center">
+                        <div class="col-4 col-sm-3 col-xl-2">
+                            <img src="assets/images/dashboard/Group126@2x.png" class="gradient-corona-img img-fluid"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="col-5 col-sm-7 col-xl-8 p-0">
+                            <h4 class="mb-1 mb-sm-0 text-white">Garment Merchandising and Export Procedures</h4>
+                            <b class="mb-0 font-weight-normal d-none d-sm-block text-white ms-3 mt-1">Enterprise
+                                Resource Planning
+                            </b>
+                        </div>
+                        <div class="col-3 col-sm-2 col-xl-2 pl-0 text-center">
+                            <span>
+                                <a href="" target="_blank"
+                                    class="btn btn-outline-light btn-rounded get-started-btn">FASION
+                                    Like PRO</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <div class="row ">
+                        <div class="col-9 ">
+                            <div class="d-flex align-items-center align-self-start">
+                                <h3 class="mb-0">$120.34</h3>
+                                <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="icon icon-box-success ">
+                                <span class="mdi mdi-arrow-top-right icon-item"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="font-weight-normal">Potential growth</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+            <div class="card bg-dark text-white">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="d-flex align-items-center align-self-start ">
+                                <h3 class="mb-0">$170.34</h3>
+                                <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="icon icon-box-success">
+                                <span class="mdi mdi-arrow-top-right icon-item"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="font-weight-normal">Revenue current</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+            <div class="card bg-dark text-white ">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="d-flex align-items-center align-self-start">
+                                <h3 class="mb-0">$120.34</h3>
+                                <p class="text-danger ml-2 mb-0 font-weight-medium">-2.4%</p>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="icon icon-box-danger">
+                                <span class="mdi mdi-arrow-bottom-left icon-item"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="font-weight-normal">Monthly Income</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="d-flex align-items-center align-self-start">
+                                <h3 class="mb-0">$310.53</h3>
+                                <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="icon icon-box-success ">
+                                <span class="mdi mdi-arrow-top-right icon-item"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="font-weight-normal">Expense current</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 grid-margin stretch-card">
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <h4 class="card-title">Transaction History</h4>
+                    <canvas id="transaction-history" class="transaction-chart"></canvas>
+                    <h6 class="text-center mt-1">Total Amount: {{ totalAmount | currency }}</h6>
+
+                    <div>
+                        <div *ngFor="let transaction of transaction"
+                            class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3 bg-dark text-white  mat-elevation-z8">
+                            <div class="text-md-center text-xl-left">
+                                <h6 class="mb-2">{{ transaction.description }}</h6>
+                                <p class="mb-1">{{ transaction.date | date: 'd MMM, y hh:mm:ss a' }}</p>
+                            </div>
+                            <div
+                                class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+                                <h6 class="font-weight-bold mb-0">{{ transaction.amount | currency }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-md-8 grid-margin stretch-card">
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <div class="d-flex flex-row justify-content-center">
+                        <h4 class="card-title mb-4 text-center">Available Categories</h4>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="table-responsive" style="max-width: 100%; overflow-x: auto;">
+                            <table class="table table-dark table-striped mt-5 mat-elevation-z8 " >
+                                <thead>
+                                    <tr>
+                                        <th>Attached</th>
+                                        <th>Category Name</th>
+                                        <th>Description</th>
+                                        <th>Code</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let cat of productCategory; let i = index">
+                                        <td class="user-photo">
+                                            <img [src]="cat.image ? 'http://localhost:8089/images/' + cat.image : 'static/images/**'"
+                                                alt="Profile Photo" class="img-thumbnail" />
+                                        </td>
+                                        <td>{{ cat.name }}</td>
+                                        <td>{{ cat.description }}</td>
+                                        <td>{{ cat.categoryCode }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="row">
+        <div class="col-sm-4 grid-margin ">
+
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <h5>Revenue</h5>
+                    <div class="row ">
+                        <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                            <div class="d-flex d-sm-block d-md-flex align-items-center">
+                                <h2 class="mb-0">$489500</h2>
+                                <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
+                            </div>
+                            <h6 class=" font-weight-normal">11.38% Since last month</h6>
+                        </div>
+                        <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                            <i class="icon-lg mdi mdi-codepen text-primary ml-auto"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-sm-4 grid-margin">
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <h5>Sales</h5>
+                    <div class="row">
+                        <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                            <div class="d-flex d-sm-block d-md-flex align-items-center">
+                                <h2 class="mb-0">$4,500,000</h2>
+                                <p class="text-success ml-2 mb-0 font-weight-medium">+8.3%</p>
+                            </div>
+                            <h6 class=" font-weight-normal"> 9.61% Since last month</h6>
+                        </div>
+                        <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                            <i class="icon-lg mdi mdi-wallet-travel text-danger ml-auto"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 grid-margin">
+            <div class="card bg-dark text-white">
+                <div class="card-body ">
+                    <h5>Purchase</h5>
+                    <div class="row">
+                        <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                            <div class="d-flex d-sm-block d-md-flex align-items-center">
+                                <h2 class="mb-0">$740,2500</h2>
+                                <p class="text-danger ml-2 mb-0 font-weight-medium">-2.1% </p>
+                            </div>
+                            <h6 class="font-weight-normal">2.27% Since last month</h6>
+                        </div>
+                        <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                            <i class="icon-lg mdi mdi-monitor text-success ml-auto"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-12 grid-margin ">
+            <div class="card bg-dark text-white">
+                <div class="card-body ">
+                    <h4 class="card-title justify-content-center text-center">Order Status</h4>
+
+                    <div class="table-responsive">
+                        <table class="table table-dark table-striped mt-4 mat-elevation-z8">
+                            <thead>
+                                <tr>
+                                    <th>
+
+                                    </th>
+                                    <th>Customer Name</th>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Sizes</th>
+                                    <th>Total Price</th>
+                                    <th>Order Date</th>
+                                    <th>Delivery Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let order of orderItem">
+                                    <td>
+                                        <div class="form-check form-check-muted m-0">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input">
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>{{ order.customer.name }}</td>
+                                    <td>{{ order.product.name }}</td>
+                                    <td>{{ order.quantity }}</td>
+                                    <td>{{ order.product.sizes}}</td>
+                                    <td>{{ order.totalPrice | currency }}</td>
+                                    <td>{{ order.orderDate | date}}</td>
+                                    <td>{{ order.deliveryDate | date }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        
+        <div class="col-md-6 col-xl-4 grid-margin stretch-card">
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <h4 class="card-title">Purchase List</h4>
+                    
+                    <div class="table-responsive" style="max-height: 600px; overflow-y: auto; overflow-x: auto;">
+                        <table class="table table-dark table-striped mt-4 mat-elevation-z8">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Code</th>
+                                    <th>Price</th>
+                                    <th>Sizes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let product of product; let i = index">
+                                    <td class="user-photo">
+                                        <img [src]="product.image ? 'http://localhost:8089/images/' + product.image : 'static/images/**'"
+                                            alt="Photo" class="img-thumbnail" />
+                                    </td>
+                                    <td>{{ product.productCode }}</td>
+                                    <td>{{ product.price | currency }}</td>
+                                    <td>{{ product.sizes }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col-md-6 col-xl-4 grid-margin stretch-card">
+            <div class="card bg-dark text-white">
+
+                <div class="d-flex flex-row justify-content-center">
+                    <h3 class="card-title mb-3 mt-3 ms-2">Available Products</h3>
+                </div>
+
+                <div class="card mb-4 bg-dark text-white justify-content-center d-flex">
+
+                    <div class="card-body mat-elevation-z8">
+
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+                            (slid.bs.carousel)="updateSelectedProduct($event)">
+                            <div class="carousel-inner mat-elevation-z8">
+
+                                <ng-container *ngFor="let u of product; let i = index">
+                                    <div class="carousel-item" [ngClass]="{'active': i === 0}">
+                                        <img src="http://localhost:8089/images/{{u.image}}" class="d-block w-100"
+                                            alt="{{u.name}}">
+                                    </div>
+                                </ng-container>
+
+                            </div>
+
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+                        <div class="text-center">
+                            <h5 class="card-title mt-1">{{ selectedProduct?.name }}</h5>
+                            <div>
+
+                                <p class="card-text">
+                                    <strong>More In Sizes:</strong> {{selectedProduct?.price}}
+                                    <strong>Description:</strong> {{selectedProduct?.description}}<br><br>
+                                    <strong>Product Code:</strong> {{selectedProduct?.productCode}}<br>
+                                    <strong>Price:</strong> {{selectedProduct?.price }}<br>
+                                    <strong>More In Sizes:</strong> {{selectedProduct?.sizes}}
+                                    <strong>More In Sizes:</strong> {{selectedProduct?.purchaseDate}}
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="col-md-12 col-xl-4 grid-margin stretch-card">
+            <div class="card bg-dark text-white">
+                <div class="card-body" id="todo">
+                    <h4 class="card-title">To do list</h4>
+                    <div class="add-items d-flex">
+                        <input type="text" class="form-control todo-list-input bg-dark text-white"
+                            placeholder="enter task.." [(ngModel)]="newTask" name="task">
+                        <button class="add btn btn-primary todo-list-add-btn text-white"
+                            (click)="addTask()">Add</button>
+                    </div>
+                    <div class="list-wrapper">
+                        <ul class="d-flex flex-column-reverse text-white todo-list todo-list-custom">
+                            <li *ngFor="let task of tasks" [ngClass]="{'completed': task.status === 'COMPLETED'}"
+                                class="d-flex justify-content-between align-items-center">
+
+                                <div class="form-check form-check-primary ">
+                                    <label class="form-check-label text-white">
+                                        <input class="checkbox bg-dark text-white" type="checkbox"
+                                            (change)="markAsCompleted(task.id, $event)"
+                                            [checked]="task.status === 'COMPLETED'">
+                                        {{ task.description }}
+                                    </label>
+                                </div>
+
+                                <i class="remove mdi mdi-close-box" (click)="deleteTask(task.id)"
+                                    style="cursor: pointer;"></i>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card bg-dark text-white bg-dark">
+                <div class="card-body">
+                    <h4 class="card-title">Country Progress List</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="table-responsive">
+
+                                <table class=" table table-dark table-striped mt-4 mat-elevation-z8">
+                                    <thead>
+                                        <tr>
+                                            <th> Sl </th>
+                                            <th> Country name </th>
+                                            <th> Bussinesses </th>
+                                            <th> Progress </th>
+                                            <th> Yearly Sale </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let country of country ,let i = index">
+                                            <td class="py-1">
+                                                {{ i+1 }}
+                                            </td>
+                                            <td>{{ country.name }} </td>
+                                            <td> {{country.bussiness}}</td>
+                                            <td>
+
+
+                                                <div class="progress">
+                                                    <div class="progress-bar text-white" role="progressbar"
+                                                        [style.width]="(country.sale / maxSale) * 100 + '%'"
+                                                        [style.background-color]="getProgressColor(country.sale / maxSale * 100)"
+                                                        [attr.aria-valuenow]="(country.sale / maxSale) * 100"
+                                                        aria-valuemin="0" aria-valuemax="100">
+                                                        {{(country.sale / maxSale) * 100 | number: '1.0-0'}}%
+                                                    </div>
+                                                </div>
+
+
+
+                                            </td>
+                                            <td>{{country.sale|currency}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border">
+                            <div id="audience-map" class="vector-map"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

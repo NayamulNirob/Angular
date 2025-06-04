@@ -1,0 +1,34 @@
+[
+    {
+      "id": "1",
+      "name": "Item A",
+      "stock": 10,
+      "location": "Warehouse 1",
+      "description": "Description of Item A",
+      "price": 20
+    },
+    {
+      "id": "2",
+      "name": "Item B",
+      "stock": 5,
+      "location": "Warehouse 2",
+      "description": "Description of Item B",
+      "price": 15
+    },
+    {
+      "id": "3",
+      "name": "Product C",
+      "stock": 100,
+      "location": "Shelf 1",
+      "description": "High-quality product A",
+      "price": 20
+    },
+    {
+      "id": "4",
+      "name": "Product D",
+      "stock": 50,
+      "location": "Shelf 2",
+      "description": "Popular product B",
+      "price": 15
+    }
+  ]

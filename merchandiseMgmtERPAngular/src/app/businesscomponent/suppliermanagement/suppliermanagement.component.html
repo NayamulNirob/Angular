@@ -1,0 +1,205 @@
+<h2 class="card-title text-center">Supplier Management</h2>
+<div class="col-12 grid-margin mt-5">
+  <div class="card bg-dark text-white border rounded ">
+    <div class="card-body">
+      <h4 class="card-title text-center">New Supplier Add Form</h4>
+      <form class="form-sample" (ngSubmit)="addSupplier()">
+        <h6 class="card-description mb-3">Fill up All Requared Field </h6>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label"> Name </label>
+              <div class="col-sm-9">
+                <input type="text" [(ngModel)]="newSupplier.name" name="name" placeholder="Supplier Name" required
+                  class="form-control" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Contact Person</label>
+              <div class="col-sm-9">
+                <input type="text" [(ngModel)]="newSupplier.contactPerson" name="contactPerson"
+                  placeholder="Contact Person" required class="form-control" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Country</label>
+              <div class="col-sm-9">
+
+
+                <select class="form-control" id="country" [(ngModel)]="newSupplier.country" name="country" required>
+                  <option *ngFor="let countries of country" [ngValue]="countries">{{ countries.name }}</option>
+                </select>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Membership Status</label>
+              <div class="col-sm-3">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="status" id="statusGerments" value="Germents"
+                      checked [(ngModel)]="newSupplier.status"> Germents </label>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="status" id="statusRowMetaril&chemical"
+                      value="Row Metaril&chemical" checked [(ngModel)]="newSupplier.status">Row Metaril</label>
+                </div>
+              </div>
+
+              <div class="col-sm-3">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="status" id="statusAccessories"
+                      value="Accessories" checked [(ngModel)]="newSupplier.status"> Accessories </label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label"> Email </label>
+              <div class="col-sm-9">
+                <input type="email" [(ngModel)]="newSupplier.email" name="email" placeholder="Email" required
+                  class="form-control" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Phone</label>
+              <div class="col-sm-9">
+                <input type="text" [(ngModel)]="newSupplier.phone" name="phone" placeholder="Phone Number" required
+                  class="form-control" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Address </label>
+              <div class="col-sm-9">
+
+
+                <textarea class="form-control" id="exampleTextarea1" rows="2" type="text"
+                  [(ngModel)]="newSupplier.address" name="address" placeholder="Organization Address"
+                  required></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Organization</label>
+              <div class="col-sm-9">
+                <input type="text" [(ngModel)]="newSupplier.organization" name="organization"
+                  placeholder="Organization Name" required class="form-control" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <button type="submit" class="btn btn-success mr-2 mt-5">Submit</button>
+        <button type="reset" class="btn btn-primary mt-5">Cancel</button>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="row ">
+  <div class="col-md-12 d-flex justify-content-between align-items-start ">
+
+    <input type="text" class="ms-3 bg-dark text-white border rounded p-2 mb-2" style="max-width: 250px; color: #fff;"
+      [(ngModel)]="searchTerm" name="search" (input)="filterSuppliers()" placeholder="Search by supplier name or contact person..."
+      onfocus="this.placeholder='Search by Suppliers name or contact...'" />
+
+    <div class="d-flex align-items-center">
+      
+      <select [(ngModel)]="sortBy" name="sort" (change)="sortSuppliers()" class="form-control  bg-dark text-white border rounded"
+        style="max-width: 150px;">
+        <option value="name">Sort by Name</option>
+        <option value="contactPerson">Sort by Contact Person</option>
+        <option value="email">Sort by Email</option>
+      </select>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row mt-1">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card bg-dark text-white  border rounded ">
+      <div class="card-body">
+        <h4 class="card-title">Suppliers List</h4>
+
+        <div class="table-responsive">
+          <table class="table table-dark table-striped ">
+            <thead>
+              <tr>
+                <th>Sl</th>
+                <th>Supplier Name</th>
+                <th>Contact Person</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Country</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let supplier of filteredSuppliers; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ supplier.name }}</td>
+                <td>{{ supplier.contactPerson }}</td>
+                <td>{{ supplier.email }}</td>
+                <td>{{ supplier.phone }}</td>
+                <td>{{ supplier.address }}</td>
+                <td>{{ supplier.country.name }}</td>
+                <td>{{ supplier.createdAt | date: 'd MMM, y hh:mm:ss a' }}</td>
+                <td>{{ supplier.updatedAt | date: 'd MMM, y hh:mm:ss a' }}</td>
+                <td>{{ supplier.status }}</td>
+                <td>
+                  <a class="btn text-white" data-toggle="modal" (click)="updateSupplier(supplier.id)">
+                    <i class="fa-solid fa-pen-to-square" style="color: #66fc72;"></i>
+                  </a>
+                  <a class="btn" data-toggle="modal" (click)="removeSupplier(supplier.id)">
+                    <i class="fa-solid fa-trash-can" style="color: #fd0101;"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
