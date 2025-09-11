@@ -8,15 +8,13 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
-  declarations: [
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
     AppComponent,
     NavbarComponent,
     FooterComponent,
     SidebarComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
   ],
   providers: [
     provideClientHydration()
